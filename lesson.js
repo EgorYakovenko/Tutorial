@@ -2236,3 +2236,450 @@
 // console.log(mango.blacklistedEmails); // ["poly@mail.com"]
 // console.log(mango.isBlacklisted("mango@mail.com")); // false
 // console.log(mango.isBlacklisted("poly@mail.com")); // true
+
+
+// const date = new Date();
+
+// console.log(date);
+// console.log(new Date(0));
+// console.log("getDate(): ", date.getDate());
+// console.log("getDay(): ", date.getDay());
+// console.log("getMonth(): ", date.getMonth());
+// console.log("getFullYear(): ", date.getFullYear());
+
+// // Возвращает час
+// console.log("getHours(): ", date.getHours());
+
+// // Возвращает минуты
+// console.log("getMinutes(): ", date.getMinutes());
+
+// // Возвращает секунды
+// console.log("getSeconds(): ", date.getSeconds());
+
+// // Возвращает миллисекунды
+// console.log("getMilliseconds(): ", date.getMilliseconds());
+
+// const date = new Date();
+// console.log("Date: ", date);
+
+// // Возвращает день месяца от 1 до 31
+// console.log("getUTCDate(): ", date.getUTCDate());
+
+// // Возвращает день недели от 0 до 6
+// console.log("getUTCDay(): ", date.getUTCDay());
+
+// // Возвращает месяц от 0 до 11
+// console.log("getUTCMonth(): ", date.getUTCMonth());
+
+// // Возвращает год из 4 цифр
+// console.log("getUTCFullYear(): ", date.getUTCFullYear());
+
+// // Возвращает час
+// console.log("getUTCHours(): ", date.getUTCHours());
+
+// // Возвращает минуты
+// console.log("getUTCMinutes(): ", date.getUTCMinutes());
+
+// // Возвращает секунды
+// console.log("getUTCSeconds(): ", date.getUTCSeconds());
+
+// // Возвращает миллисекунды
+// console.log("getUTCMilliseconds(): ", date.getUTCMilliseconds());
+
+// const isSuccess = false;
+
+// const promise = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     if (isSuccess) {
+//       resolve("Success! Value passed to resolve function");
+//     } else {
+//       reject("Error! Error passed to reject function");
+//     }
+//   }, 2000);
+// });
+// console.log(promise)
+
+// const isSuccess = true;
+
+// const promise = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     if (isSuccess) {
+//       resolve("Success! Value passed to resolve function");
+//     } else {
+//       reject("Error! Error passed to reject function");
+//     }
+//   }, 2000);
+// });
+
+// // Will run first
+// console.log("Before promise.then()");
+
+// // Registering promise callbacks
+// promise.then(
+//   // onResolve will run third or not at all
+//   value => {
+//     console.log("onResolve call inside promise.then()");
+//     console.log(value); // "Success! Value passed to resolve function"
+//   },
+//   // onReject will run third or not at all
+//   error => {
+//     console.log("onReject call inside promise.then()");
+//     console.log(error); // "Error! Error passed to reject function"
+//   }
+// );
+
+// // Will run second
+// console.log("After promise.then()");
+
+// function sum(a, b) {
+//   return a + b;
+// }
+
+// const res = sum(4, 6);
+// console.log(res);
+
+// console.log(Math.random()*(max-min)+min);
+
+// const res = Math.random() * 100
+
+// console.log(Math.round(res));
+
+// const colors = ['tomato', 'teal', 'orange', 'deeppink', 'skyblue']
+// const max = colors.length - 1;
+// const min = 0;
+// const index = Math.round(Math.random() * (max - min) + min);
+// const color = colors[index];
+// console.log(color);
+
+// document.body.style.backgroundColor = color;
+
+// const i = false && 4 && 7 && 'mango';
+// console.log(i);
+
+// const ili = false || 5 || null || 0;
+// console.log(ili)
+
+// const ne = !false
+// console.log(ne)
+
+
+// const x1 = 10;
+// const x2 = 30;
+// const number = 50;
+
+// console.log(`Число ${number} попадает в отрезок до ${x1}`, number < x1)
+// console.log(`Число ${number} попадает в отрезок до ${x2}`, number > x2)
+// console.log(`Число ${number} попадает в отрезок до ${x1}`, number > x1 && number < x2);
+// console.log(`Число ${number} попадает в отрезок до ${x1} или после ${x2}`, number < x1 || number > x2);
+
+// const isOnline = true;
+// const isFriend = true;
+// const isDnd = false;
+
+// const canOpenChat = isOnline && isFriend && !isDnd;
+// console.log('Можно открыть чат?', canOpenChat)
+
+
+
+// const minSalary = 500;
+// const maxSalary = 5000;
+// const employes = 5;
+// let totalSalary = 0;
+
+// for (let i = 1; i <= employes; i += 1){
+//     const salary = Math.round(Math.random() * (maxSalary - minSalary) + minSalary);
+//     console.log(`ЗП работника номер ${i} - ${salary}`)
+//     totalSalary += salary
+// }
+// console.log(totalSalary)
+
+// const min = 0;
+// const max = 10;
+// let total = 0;
+
+// for (let i = min; i <= max; i += 1){
+    
+//     if (i % 2 === 0) {
+//         console.log('четное', i)
+//         total += i;
+//     }
+
+
+    
+// }
+// console.log('total',total)
+// ========================================================================
+
+// function findNumber(start, end, divisor) {
+//   // Change code below this line
+// //   let number;
+
+//     for (let i = start; i < end; i += 1) {
+//       console.log(i)
+//       if (i % divisor === 0) {
+        
+    
+//       return i;
+//     }
+//   }
+
+//   return number;
+//   // Change code above this line
+// }
+
+// // findNumber(2, 6, 5) //возвращает 5
+// console.log(findNumber(8, 17, 3))
+//==========================================================================
+
+// function filterArray(numbers, value) {
+//   // Change code below this line
+//   const filteredNumbers = [];
+
+//   for (let num of numbers) {
+//     const number = num;
+//     console.log('Это функции:', number)
+//     if (number > value) {
+//       filteredNumbers.push(number);
+//     }
+//   }
+
+//   return filteredNumbers;
+//   // Change code above this line
+// }
+
+// console.log('Это вызов функции:', filterArray([1, 2, 3, 4, 5], 3))
+// // filterArray([1, 2, 3, 4, 5], 3) //возвращает [4, 5]
+//=============================================================================
+
+// function checkFruit(fruit) {
+//   const fruits = ["apple", "plum", "pear", "orange"];
+
+//   return fruits.includes(fruit); // Change this line
+// }
+// // console.log(checkFruit("plum"))
+
+
+// const test = checkFruit("pear");
+// console.log(test)
+//=======================================================================
+
+// function filterArray(numbers, value) {
+//    // Change code below this line
+// let newArray = [];
+//     for (let i = 0; i <= numbers.length; i += 1) {
+//         if (numbers[i] > value) {
+//             newArray.push(numbers[i]);
+//         }
+        
+//     }
+//     return newArray;
+
+
+//   // Change code above this line
+// }
+// console.log(filterArray([1, 2, 3, 4, 5], 4))
+//=====================================================================
+
+// function findLongestWord(string) {
+//   // Change code below this line
+//   const stringSpace = string.split(' ');
+//   let longString = '';
+ 
+//     for (let i = 0; i < stringSpace.length; i += 1){
+     
+//     if (stringSpace[i].length > longString.length) {
+//       longString = stringSpace[i]
+//       console.log(stringSpace[i])
+//     }
+    
+//   }
+
+// return longString;
+//   // Change code above this line
+// }
+// console.log(findLongestWord("The quick brown fox jumped over the lazy dog"))
+// // findLongestWord("The quick brown fox jumped over the lazy dog") //возвращает jumped
+//=======================================================================
+
+// const apartment = {
+//   imgUrl: "https://via.placeholder.com/640x480",
+//   descr: "Spacious apartment in the city center",
+//   rating: 4,
+//   price: 2153,
+//   tags: ["premium", "promoted", "top"],
+//   owner: {
+//     name: 'Henry',
+//     phone: "982-126-1588",
+//     email: "henry.carter@aptmail.com",
+//   }
+// };
+
+// const { imgUrl, descr, rating, price } = apartment
+// console.log(price, imgUrl)
+
+// apartment.price = 5000;
+// apartment.rating = 4.7;
+// apartment.owner.name = "Henry Sibola"
+// apartment.tags.push("trusted")
+
+// apartment.area = 60;
+// apartment.rooms = 3;
+// apartment.location = { country: "Jamaica", city: "Kingston" }
+
+// const aptRating = apartment['rating'];
+// const aptDescr = apartment['descr'];
+// const aptPrice = apartment['price'];
+// const aptTags = apartment['tags'];
+
+// const ownerName = apartment.owner.name;
+// const ownerPhone = apartment.owner.phone;
+// const ownerEmail = apartment.owner.email;
+// const numberOfTags = apartment.tags.length;
+// const firstTag = apartment.tags[0];
+// const lastTag = apartment.tags[apartment.tags.length -1];
+
+
+// console.log('Исходный объект -', apartment);
+// console.log('Рейтинг -', aptRating);
+// console.log('Описание -', aptDescr);
+// console.log('Цена -', aptPrice);
+// console.log('Теги -', aptTags);
+// console.log('последний тег -', lastTag);
+// console.log('Имя -', ownerName);
+
+// const emailInputName = "email";
+// const passwordInputName = "password";
+
+// const credentials = {
+//   // Change code below this line
+// [emailInputName]: "henry.carter@aptmail.com",
+//   [passwordInputName]: "jqueryismyjam",
+
+
+//   // Change code above this line
+// };
+
+// console.log([emailInputName])
+
+
+// const scores = [89, 64, 42, 17, 93, 51, 26];
+// // Change code below this line
+// const bestScore = Math.max(...scores);
+// const worstScore = Math.min(...scores);
+// console.log(bestScore)
+
+// ================================================================================
+// function findNeedle(haystack) {
+//     console.log(haystack.indexOf("needle"))
+//   return "found the needle at position " + haystack.indexOf("needle");
+// }
+
+// findNeedle(["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"]);
+
+//=================================================================================
+
+
+
+// 2 -> 3 (1 + 2)
+// 8 -> 36 (1 + 2 + 3 + 4 + 5 + 6 + 7 + 8)
+
+
+// function removeEveryOther(arr) {
+//     let newArray = [];
+//     for (let array of arr) {
+//         if (array === 'Keep') {
+//             newArray.push(array)
+//             // console.log(newArray)
+            
+//         }
+        
+//     //   console.log([array])
+//   }
+
+//     return newArray;
+// }
+
+// console.log(newArray)
+// // console.log(removeEveryOther(["Keep", "Remove", "Keep", "Remove", "Keep"]))
+// removeEveryOther(["Keep", "Remove", "Keep", "Remove", "Keep"])
+
+
+// const abjA = {
+//     x: 5,
+//     showX() {
+//         console.log('This v showthisX', this);
+//         console.log(this.x);
+
+//         const objB = {
+//             y: 10,
+//             showThis:() => {
+//                 console.log('This v showthis', this)
+//             }
+//         }
+//         objB.showThis()
+//     }
+// }
+ 
+// abjA.showX()
+
+
+
+// numbers.forEach(function (number, index, array) {
+//     console.log(number, index, array);
+// });
+
+// const doubleNums = numbers.map(number => {
+//     console.log(number)
+//     return number * 2
+// });
+// console.log('number', numbers)
+// console.log('doubleNums' ,doubleNums)
+
+const players = [
+    { id: 'player-1', name: 'Mango', timePlayed: 310, points: 54, online: false },
+    { id: 'player-2', name: 'Poly', timePlayed: 345, points: 56, online: true },
+    { id: 'player-3', name: 'Kiwi', timePlayed: 787, points: 34, online: true },
+    { id: 'player-4', name: 'Ajax', timePlayed: 543, points: 89, online: false },
+    { id: 'player-5', name: 'Chelsy', timePlayed: 897, points: 94, online: true },
+];
+
+// const playerNames = players.map(player => {
+//     console.log(player)
+//     return player.name;
+// });
+// console.log('playerNames', playerNames)
+
+// const updatePlayers = players.map(player => {
+//     console.log(player)
+//     return {
+//         ...player,
+//         points: player.points * 2,
+//     };
+// });
+// console.table(updatePlayers)
+
+// const playerId = 'player-3';
+
+// const updatePlayers = players.map(player => 
+//     playerId===player.id ? {...player, timePlayed: player.timePlayed +1000}:player,
+// );
+// console.table(updatePlayers)
+
+// const numbers = [5, 10, 15, 20, 25];
+
+// const total = numbers.reduce((acc, number) => {
+//     console.log('number', number);
+//     console.log('acc', acc)
+
+//     return acc + number;
+// },0 );
+// console.log(total)
+
+
+
+
+
+
+
+
+
