@@ -2622,7 +2622,7 @@
  
 // abjA.showX()
 
-
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 // numbers.forEach(function (number, index, array) {
 //     console.log(number, index, array);
@@ -2635,13 +2635,13 @@
 // console.log('number', numbers)
 // console.log('doubleNums' ,doubleNums)
 
-const players = [
-    { id: 'player-1', name: 'Mango', timePlayed: 310, points: 54, online: false },
-    { id: 'player-2', name: 'Poly', timePlayed: 345, points: 56, online: true },
-    { id: 'player-3', name: 'Kiwi', timePlayed: 787, points: 34, online: true },
-    { id: 'player-4', name: 'Ajax', timePlayed: 543, points: 89, online: false },
-    { id: 'player-5', name: 'Chelsy', timePlayed: 897, points: 94, online: true },
-];
+// const players = [
+//     { id: 'player-1', name: 'Mango', timePlayed: 310, points: 54, online: false },
+//     { id: 'player-2', name: 'Poly', timePlayed: 345, points: 56, online: true },
+//     { id: 'player-3', name: 'Kiwi', timePlayed: 787, points: 34, online: true },
+//     { id: 'player-4', name: 'Ajax', timePlayed: 543, points: 89, online: false },
+//     { id: 'player-5', name: 'Chelsy', timePlayed: 897, points: 94, online: true },
+// ];
 
 // const playerNames = players.map(player => {
 //     console.log(player)
