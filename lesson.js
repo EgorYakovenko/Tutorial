@@ -78,7 +78,7 @@
 // }
 
 // ================================================================================
-    // 1.2
+// 1.2
 
 // 1. Дано число. Выведите в консоль первую цифру этого числа.
 
@@ -95,7 +95,6 @@
 // console.log(firstNumber);
 // ================================================================================
 // Дано число. Выведите в консоль сумму первой и последней цифры этого числа.
-
 
 // ===============================АВТОПРОВЕРКА=================================================
 // const fruits = ['apple', 'plum', 'pear', 'orange', 'banana'];
@@ -137,11 +136,11 @@
 
 // function calculateTotalPrice(order) {
 //   let total = 0;
-  
+
 // for (i = 0; i < order.length; i++) {
 //     total += order[i];
 // }
-  
+
 //   return total;
 // }
 
@@ -159,7 +158,7 @@
 //     if (stringSpace[i].length > longString.length) {
 //          longString = stringSpace[i]
 //     }
-    
+
 // }
 // console.log(longString);
 
@@ -177,14 +176,12 @@
 //     console.log(newArray)
 // }
 
-
 //================================================================================
 
 // Напиши функцию filterArray(numbers, value), которая принимает
 // массив чисел(параметр numbers) и возвращает новый массив,
 // в котором будут только те элементы массива numbers,
 // которые больше чем значение параметра value(число).
-
 
 // function filterArray(numbers, value) {
 //     newArray = [];
@@ -211,9 +208,9 @@
 
 // function checkFruit(fruit) {
 //   const fruits = ["apple", "plum", "pear", "orange"];
-    
+
 //     return fruits.includes(fruit); // Change this line
-    
+
 // }
 
 //================================================================================
@@ -247,7 +244,7 @@
 
 //   for (let array of order) {
 //       total += array;
-   
+
 //   }
 //     console.log(total);
 //   // Change code above this line
@@ -255,7 +252,7 @@
 // }
 
 // calculateTotalPrice(arr1)
- 
+
 //================================================================================
 
 // Пример функции
@@ -284,8 +281,6 @@
 // Выполни рефакторинг функции filterArray(numbers, value)
 //  заменив цикл for на for...of.
 //=========
-
-
 
 // function filterArray(numbers, value) {
 //   // Change code below this line
@@ -350,7 +345,6 @@
 
 //================================================================================
 
-
 // Напиши функцию includes(array, value), которая делает тоже самое,
 // что и метод массива массив.includes(значение) - проверяет,
 // есть ли в массиве array значение value, возвращая true если
@@ -360,18 +354,17 @@
 // использовать метод массив.includes(значение).
 
 // function includes(array, value) {
-  
+
 //     for (let i = 0; i < array.length; i+=1) {
 //         if (array[i] === value) {
 //             console.log(true)
 //             return true;
-            
+
 //         }
-       
+
 // }
 // return false;
 // }
-
 
 // // includes([1, 2, 3, 4, 5], 3)
 //  includes(['Earth', 'Mars', 'Venus', 'Jupiter', 'Saturn'], 'Jupiter')
@@ -462,7 +455,6 @@
 // apartment.owner.name = "Henry Sibola";
 // apartment.tags.push("trusted")
 
-
 // console.log(apartment.price)
 // console.log(apartment.owner.name)
 // console.log(apartment.tags)
@@ -515,7 +507,7 @@
 // const credentials = {
 //   [emailInputName]: "henry.carter@aptmail.com",
 //   [passwordInputName]: "jqueryismyjam",
-  
+
 // };
 // console.log(credentials)
 
@@ -533,7 +525,7 @@
 // const values = [];
 // // Change code below this line
 // for (let apart in apartment) {
-  
+
 //   keys.push(apart);
 //   // values.push(apart[apartment])
 //   values.push(apartment[apart]);
@@ -565,7 +557,7 @@
 //     console.log(key)
 // }
 //   // Change code above this line
-  
+
 // }
 // // console.log(keys)
 // // console.log(values)
@@ -618,9 +610,9 @@
 //   цикл for...of.
 
 // function countProps(object) {
-  
+
 //   return Object.keys(object).length
-  
+
 // }
 // countProps({ name: "Mango", age: 2 })
 // console.log(countProps)
@@ -658,7 +650,7 @@
 //   // Change code below this line
 //     const totalValue = Object.values(salaries)
 //     for (const salar of totalValue) {
-        
+
 //         totalSalary += salar
 //         // console.log(totalSalary)
 // }
@@ -680,16 +672,15 @@
 // const rgbColors = [];
 
 // for (const key of colors) {
-    
+
 //     hexColors.push(key.hex)
 //     rgbColors.push(key.rgb)
-        
+
 // }
 // console.log(hexColors)
 // console.log(rgbColors)
 
 //================================================================================
-
 
 // const products = [
 //   { name: "Radar", price: 1300, quantity: 4 },
@@ -704,10 +695,10 @@
 // // const prod = Object.keys(products)
 //     for (const product of products) {
 //       if (productName === product.name) {
-        
+
 //         return product.price;
 //       }
-         
+
 //     }
 //   return null;
 //   // Change code above this line
@@ -715,7 +706,6 @@
 // console.log(getProductPrice("Radar"))
 
 //================================================================================
-
 
 // const products = [
 //   { name: "Radar", price: 1300, quantity: 4 },
@@ -735,7 +725,7 @@
 //   }
 //      return returnValue;
 // }
- 
+
 // getAllPropValues("name")
 // console.log(getAllPropValues("name"))
 
@@ -775,7 +765,6 @@
 
 // const { yesterday, today, tomorrow } = highTemperatures;
 // // console.log(highTemperatures)
-
 
 // // Change code above this line
 // const meanTemperature = (yesterday + today + tomorrow) / 3;
@@ -822,7 +811,7 @@
 // // Change code below this line
 
 // for (const {hex, rgb} of colors) {
-  
+
 //   hexColors.push(hex);
 //   rgbColors.push(rgb);
 // }
@@ -897,7 +886,6 @@
 // console.log(bestScore)
 // console.log(worstScore)
 
-
 //================================================================================
 
 // function makeTask(data) {
@@ -907,7 +895,7 @@
 //   // Change code below this line
 
 //   const { text } = data;
-  
+
 //     const newArr = {
 //     text,
 //     category,
@@ -964,7 +952,6 @@
 // }
 // console.log(findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7))
 
-
 //================================================================================
 // ==================== МЕТОДЫ ОБЪЕКТОВ ====================
 // const bookShelf = {
@@ -995,7 +982,7 @@
 //       const array = this.books.splice(index, 1, newName)
 //         console.log(array)
 //       return array;
-      
+
 //     // Change code above this line
 //   },
 // };
@@ -1009,15 +996,14 @@
 //     // Change code below this line
 //     //   console.log(potions);
 //         this.potions.push(potionName)
-      
 
 //     // Change code above this line
 //     },
-    
+
 // };
 // atTheOldToad.addPotion("Invisibility")
 // console.log(atTheOldToad);
- 
+
 //================================================================================
 
 // const atTheOldToad = {
@@ -1026,7 +1012,7 @@
 //     // Change code below this line
 //       const oldIndex = this.potions.indexOf(oldName);
 //       const addArray = this.potions.splice(oldIndex, 1, newName);
-    
+
 //         // console.log(addArray)
 //         // console.log(oldIndex)
 //     // Change code above this line
@@ -1037,7 +1023,6 @@
 // console.log(atTheOldToad)
 
 //================================================================================
-
 
 // const atTheOldToad = {
 //   potions: [
@@ -1111,7 +1096,7 @@
 //================================================================================
 
 // function deliverPizza(pizzaName) {
-  
+
 //   return `Delivering ${pizzaName} pizza.`;
 // }
 
@@ -1121,7 +1106,7 @@
 
 // // Chande code below this line
 // function makeMessage(pizzaName, callback) {
-  
+
 //   return callback(pizzaName);
 // }
 
@@ -1167,7 +1152,7 @@
 //         if (this.pizzas.includes(pizzaName)) {
 //         return makePizza(pizzaName)
 //         }
-        
+
 //         return onOrderError(`There is no pizza with a name ${pizzaName} in the assortment.`)
 //   },
 // };
@@ -1192,7 +1177,6 @@
 // console.log(pizzaPalace.order('Big Mike', makePizza, onOrderError))
 
 //================================================================================
-
 
 // function calculateTotalPrice(orderedItems) {
 //   let totalPrice = 0;
@@ -1257,7 +1241,6 @@
 // console.log(getCommonElements([1, 2, 3], [2, 4]))
 
 //================================================= Стрелочные функции ===============================
-
 
 // const calculateTotalPrice = (quantity, pricePerItem) => {
 //   return quantity * pricePerItem;
@@ -1339,14 +1322,14 @@
 //     if (num % 2 === 0) {
 //       console.log(num + value)
 //       return num + value;
-      
+
 //     }
-    
+
 //     return num;
 //   });
 
 //   return updatedNumbers;
-  
+
 //   // Change code above this line
 // }
 
@@ -1409,7 +1392,6 @@
 // );
 // console.log(average); // Массив объектов с именами Poly и Houston
 
-
 // const books = [
 //   {
 //     title: "The Last Kingdom",
@@ -1444,7 +1426,7 @@
 
 // // Change code below this line
 // const getUsersWithEyeColor = (users, color) => {
- 
+
 //   return users.filter(user => user.eyeColor === color)
 
 // };
@@ -1460,7 +1442,6 @@
 // // Change code above this line
 
 //================================================================================
-
 
 // const users = [
 //   {
@@ -1632,7 +1613,6 @@
 // const eachElementInThirdIsEven = thirdArray.every(thirdEven => thirdEven % 2 === 0);
 // const eachElementInThirdIsOdd = thirdArray.every(thirdEven => thirdEven % 2 !== 0);
 
-
 // console.log(eachElementInFirstIsEven)
 // console.log(eachElementInFirstIsOdd)
 
@@ -1711,7 +1691,6 @@
 // const game = players.map(player => player.gamesPlayed)
 
 // const totalAveragePlaytimePerGame = players.reduce((acc, player) => acc + player.playtime / player.gamesPlayed,0);
-
 
 // console.log(time)
 // console.log(game)
@@ -1813,7 +1792,6 @@
 // console.log(sortedByReversedAuthorName)
 // console.log(sortedByAscendingRating)
 
-
 // const students = [
 //   { name: "Mango", score: 83 },
 //   { name: "Poly", score: 59 },
@@ -1895,8 +1873,6 @@
 // };
 // // Change code above this line
 
-
-
 //================================================================================
 //=============================== 5-й МОДУЛЬ =================================================
 //================================================================================
@@ -1922,19 +1898,16 @@
 //     this.brand = brand;
 //     this.model = model;
 //     this.price = price;
-    
+
 //   }
 //   // Change code below this line
 //     getPrice() {
 //       return this.price;
 //     }
-    
-      
+
 //     changePrice(newPrice){
 //       this.price = newPrice;
 //     }
-    
-
 
 //   // Change code above this line
 // }
@@ -1957,9 +1930,8 @@
 //         this.items.splice(myIndex, 1)
 //       }
 //   }
-  
-// }
 
+// }
 
 // // Change code above this line
 // const storage = new Storage(["Nanitoids", "Prolonger", "Antigravitator"]);
@@ -1989,8 +1961,6 @@
 //     }
 // }
 
-
-
 // // Change code above this line
 // const builder = new StringBuilder(".");
 // console.log(builder.getValue()); // "."
@@ -2007,7 +1977,7 @@
 //   // Change code below this line
 //         #brand = brand;
 //   constructor({ brand, model, price }) {
-        
+
 //         this.model = model;
 //         this.price = price;
 //     }
@@ -2028,7 +1998,7 @@
 //   #brand;
 //   #model;
 //   #price;
-  
+
 //   constructor({ brand, model, price }) {
 //     this.#brand = brand;
 //     this.#model = model;
@@ -2066,7 +2036,7 @@
 // class Car {
 //   // Change code below this line
 //     static MAX_PRICE = 50000;
-    
+
 //   #price;
 
 //   constructor({ price }) {
@@ -2080,9 +2050,9 @@
 //     set price(newPrice) {
 //         if (newPrice <= Car.MAX_PRICE) {
 //             this.#price = newPrice;
-            
+
 //       }
-    
+
 //   }
 //   // Change code above this line
 // }
@@ -2168,7 +2138,7 @@
 //         super(email),
 //         this.accessLevel = accessLevel
 //     }
-    
+
 //   static AccessLevel = {
 //     BASIC: "basic",
 //       SUPERUSER: "superuser",
@@ -2213,7 +2183,7 @@
 //     super(email);
 //     this.accessLevel = accessLevel;
 //     }
-    
+
 //     blacklist(email) {
 //         this.blacklistedEmails.push(email);
 //     }
@@ -2236,7 +2206,6 @@
 // console.log(mango.blacklistedEmails); // ["poly@mail.com"]
 // console.log(mango.isBlacklisted("mango@mail.com")); // false
 // console.log(mango.isBlacklisted("poly@mail.com")); // true
-
 
 // const date = new Date();
 
@@ -2362,7 +2331,6 @@
 // const ne = !false
 // console.log(ne)
 
-
 // const x1 = 10;
 // const x2 = 30;
 // const number = 50;
@@ -2378,8 +2346,6 @@
 
 // const canOpenChat = isOnline && isFriend && !isDnd;
 // console.log('Можно открыть чат?', canOpenChat)
-
-
 
 // const minSalary = 500;
 // const maxSalary = 5000;
@@ -2398,14 +2364,12 @@
 // let total = 0;
 
 // for (let i = min; i <= max; i += 1){
-    
+
 //     if (i % 2 === 0) {
 //         console.log('четное', i)
 //         total += i;
 //     }
 
-
-    
 // }
 // console.log('total',total)
 // ========================================================================
@@ -2417,8 +2381,7 @@
 //     for (let i = start; i < end; i += 1) {
 //       console.log(i)
 //       if (i % divisor === 0) {
-        
-    
+
 //       return i;
 //     }
 //   }
@@ -2458,7 +2421,6 @@
 // }
 // // console.log(checkFruit("plum"))
 
-
 // const test = checkFruit("pear");
 // console.log(test)
 //=======================================================================
@@ -2470,10 +2432,9 @@
 //         if (numbers[i] > value) {
 //             newArray.push(numbers[i]);
 //         }
-        
+
 //     }
 //     return newArray;
-
 
 //   // Change code above this line
 // }
@@ -2484,14 +2445,14 @@
 //   // Change code below this line
 //   const stringSpace = string.split(' ');
 //   let longString = '';
- 
+
 //     for (let i = 0; i < stringSpace.length; i += 1){
-     
+
 //     if (stringSpace[i].length > longString.length) {
 //       longString = stringSpace[i]
 //       console.log(stringSpace[i])
 //     }
-    
+
 //   }
 
 // return longString;
@@ -2538,7 +2499,6 @@
 // const firstTag = apartment.tags[0];
 // const lastTag = apartment.tags[apartment.tags.length -1];
 
-
 // console.log('Исходный объект -', apartment);
 // console.log('Рейтинг -', aptRating);
 // console.log('Описание -', aptDescr);
@@ -2555,12 +2515,10 @@
 // [emailInputName]: "henry.carter@aptmail.com",
 //   [passwordInputName]: "jqueryismyjam",
 
-
 //   // Change code above this line
 // };
 
 // console.log([emailInputName])
-
 
 // const scores = [89, 64, 42, 17, 93, 51, 26];
 // // Change code below this line
@@ -2578,11 +2536,8 @@
 
 //=================================================================================
 
-
-
 // 2 -> 3 (1 + 2)
 // 8 -> 36 (1 + 2 + 3 + 4 + 5 + 6 + 7 + 8)
-
 
 // function removeEveryOther(arr) {
 //     let newArray = [];
@@ -2590,9 +2545,9 @@
 //         if (array === 'Keep') {
 //             newArray.push(array)
 //             // console.log(newArray)
-            
+
 //         }
-        
+
 //     //   console.log([array])
 //   }
 
@@ -2602,7 +2557,6 @@
 // console.log(newArray)
 // // console.log(removeEveryOther(["Keep", "Remove", "Keep", "Remove", "Keep"]))
 // removeEveryOther(["Keep", "Remove", "Keep", "Remove", "Keep"])
-
 
 // const abjA = {
 //     x: 5,
@@ -2619,7 +2573,7 @@
 //         objB.showThis()
 //     }
 // }
- 
+
 // abjA.showX()
 
 // const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -2660,7 +2614,7 @@
 
 // const playerId = 'player-3';
 
-// const updatePlayers = players.map(player => 
+// const updatePlayers = players.map(player =>
 //     playerId===player.id ? {...player, timePlayed: player.timePlayed +1000}:player,
 // );
 // console.table(updatePlayers)
@@ -2668,18 +2622,162 @@
 // const numbers = [5, 10, 15, 20, 25];
 
 // const total = numbers.reduce((acc, number) => {
-//     console.log('number', number);
-//     console.log('acc', acc)
+//   console.log('number', number);
+//   console.log('acc', acc);
 
-//     return acc + number;
-// },0 );
-// console.log(total)
+//   return acc + number;
+// }, 0);
+// console.log(total);
 
+// ============================================================
 
+// const fruits = [
+//   'apple',
+//   'apple',
+//   'plum',
+//   'banana',
+//   'pear',
+//   'pear',
+//   'orange',
+//   'banana',
+//   'kiwi',
+//   'orange',
+// ];
 
+// const countFruit = list => {
+//   const count = {};
 
+//   list.map(f => {
+//     if (!count[f]) {
+//       count[f] = 1;
+//     } else {
+//       count[f]++;
+//       console.log([f]);
+//     }
+//   });
+//   return count;
+// };
+// console.log(countFruit(fruits));
 
+// ===================codewars=========================================
 
+// В вашем классе был тест, и вы его сдали. Поздравляем!
+// Но вы амбициозный человек. Вы хотите знать, лучше ли вы, чем средний ученик в вашем классе.
+// Вы получаете массив с результатами тестов ваших сверстников.
+// Теперь подсчитайте среднее значение и сравните свой результат!
+// Верните True, если вам лучше, иначе False!
+// Примечание:
+// Ваши баллы не включены в массив баллов вашего класса.
+// Для расчета среднего балла вы можете добавить свой балл в данный массив!
 
+// const classPoints = [12, 23, 34, 45, 56, 67, 78, 89, 90];
 
+// function betterThanAverage(classPoints, yourPoints) {
+//   const sum = classPoints.reduce((accumulator, currentValue) => {
+//     return accumulator + currentValue;
+//   });
+//   const average = sum / classPoints.length;
 
+//   if (average > yourPoints) {
+//     return false;
+//   } else {
+//     return true;
+//   }
+// }
+
+// console.log(betterThanAverage(classPoints, 60));
+
+//===================/codewars=========================================
+// ===================codewars=========================================
+// Натан любит кататься на велосипеде.
+// Поскольку Натан знает, как важно избегать обезвоживания,
+// он выпивает 0, 5 литра воды за час езды на велосипеде.
+// Вам дано время в часах, и вам нужно вернуть количество литров, которое выпьет Натан,
+// округленное до наименьшего значения.
+
+// For example:
+// time = 3 ----> litres = 1
+// time = 6.7---> litres = 3
+// time = 11.8--> litres = 5
+
+// function litres(time) {
+//   return Math.floor(time * 0.5);
+// }
+
+// console.log(litres(3));
+//===================/codewars=========================================
+// ===================codewars=========================================
+// Твоя работа
+// Найдите сумму всех кратных n ниже m.
+// Иметь ввиду
+// n и m — натуральные числа (целые положительные)
+// m исключено из кратных
+
+// Examples
+// sumMul(2, 9)   ==> 2 + 4 + 6 + 8 = 20
+// sumMul(3, 13)  ==> 3 + 6 + 9 + 12 = 30
+// sumMul(4, 123) ==> 4 + 8 + 12 + ... = 1860
+// sumMul(4, -7)  ==> "INVALID"
+
+// function sumMul(n, m) {
+//   if (n <= 0 || m <= 0) {
+//     return 'INVALID';
+//   }
+
+//   let sum = 0;
+
+//   for (let i = n; i < m; i += n) {
+//     sum += i;
+//   }
+
+//   return sum;
+// }
+
+// console.log(sumMul(2, 9));
+//===================/codewars=========================================
+
+// ===================codewars=========================================
+// Учитывая случайное неотрицательное число, вам необходимо вернуть цифры этого
+// числа в массиве в обратном порядке.
+
+// function digitize(n) {
+//   return n.toString().split('').map(Number).reverse();
+// }
+
+// console.log(digitize(35231));
+//===================/codewars=========================================
+//=====================================================================
+// ===================codewars=========================================
+// После тяжелого квартала в офисе вы решаете немного отдохнуть в отпуске.
+// Итак, вы забронируете рейс для себя и своей девушки и постараетесь оставить позади весь этот
+// беспорядок.
+// Вам понадобится арендованный автомобиль, чтобы передвигаться во время отпуска.
+
+// Менеджер по прокату автомобилей делает вам несколько выгодных предложений.
+// Каждый день аренды автомобиля стоит 40 долларов.Если вы арендуете автомобиль на 7 и более дней,
+// вы получите скидку 50 долларов США.Альтернативно,
+// если вы арендуете автомобиль на 3 или более дней, вы получите скидку 20 долларов США.
+
+// Напишите код, который выдает общую сумму за разные дни(d).
+
+// 1день = 40
+// скидка на 7 и более дней 50
+// скидна на 3 и более дня 20
+
+// function rentalCarCost(d) {
+//   if (d < 3) {
+//     return d * 40;
+//   }
+//   if (d >= 7) {
+//     return d * 40 - 50;
+//   }
+//   if (d <= 7 && d >= 3) {
+//     return d * 40 - 20;
+//   }
+// }
+
+// console.log(rentalCarCost(3));
+
+//===================/codewars=========================================
+//=====================================================================
+// ===================codewars=========================================
