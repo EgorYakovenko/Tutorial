@@ -2781,3 +2781,146 @@
 //===================/codewars=========================================
 //=====================================================================
 // ===================codewars=========================================
+
+// Набрать максимальное колличество очков при спуске с горы
+// вход парам [[6], [7,10], [12,11,9], [90,25,13,14]]
+// Рез 115
+
+// function findPath(mountain) {
+//   let point = mountain.map(subArray => console.log(subArray[0]));
+//   // let point = mountain.map(subArray => Math.max(...subArray));
+//   let sum = point.reduce(
+//     (accumulator, currentValue) => accumulator + currentValue,
+//     0
+//   );
+//   //   console.log(sum);
+//   return mountain;
+// }
+
+// console.log(findPath([[6], [7, 10], [12, 11, 9], [90, 25, 13, 14]]));
+
+// function maxScoreFromMountain(mountain) {
+//   // Первый шаг: начинаем с предпоследнего ряда
+//   for (let i = mountain.length - 2; i >= 0; i--) {
+//     for (let j = 0; j < mountain[i].length; j++) {
+//       // Выбираем большего из левого и правого соседа на следующем уровне
+//       let leftNeighbor = mountain[i + 1][j];
+//       console.log(leftNeighbor);
+//       let rightNeighbor = mountain[i + 1][j + 1];
+//       mountain[i][j] += Math.max(leftNeighbor, rightNeighbor);
+//     }
+//   }
+//   // Результат находится в вершине горы
+//   return mountain[0][0];
+// }
+
+// let mountain = [[6], [7, 10], [12, 11, 9], [90, 25, 13, 14]];
+// let maxScore = maxScoreFromMountain(mountain);
+// // console.log(maxScore);
+
+//                   [6]
+//                 [7, 10]
+//               [12, 11, 9]
+//            [90, 25, 13, 14]
+//          [98, 50, 68, 75, 33]
+//        [80, 40, 22, 8, 42, 25];
+//      [45, 35, 12, 78, 55, 23,68];
+
+// function findPath(mountain, currentRow = 0, currentColumn = 0) {
+//   // Базовый случай: если достигли нижнего уровня горы
+//   if (currentRow === mountain.length - 1) {
+//     return mountain[currentRow][currentColumn];
+//   }
+
+//   // Рекурсивный случай: выбираем направление с максимальным количеством очков
+//   const leftNumber = findPath(mountain, currentRow + 1, currentColumn);
+//   const rightNumber = findPath(mountain, currentRow + 1, currentColumn + 1);
+
+//   // Возвращаем сумму значения текущей клетки и максимального количества очков из выбранного направления
+//   return (
+//     mountain[currentRow][currentColumn] + Math.max(leftNumber, rightNumber)
+//   );
+// }
+
+// let mountain = [[6], [7, 10], [12, 11, 9], [90, 25, 13, 14]];
+// let maxScore = findPath(mountain);
+// console.log(maxScore);
+
+// const mountain = [[1], [1, 100], [1, 1, 1], [1, 1, 1, 1]];
+// function maxPoints(mountain) {
+//   if (!mountain || mountain.length === 0) {
+//     return 0;
+//   }
+
+//   const rows = mountain.length;
+
+//   // Создаем копию горы для вычислений
+//   const dp = mountain.map(row => [...row]);
+
+//   // Начинаем с предпоследнего ряда
+//   for (let i = rows - 2; i >= 0; i--) {
+//     for (let j = 0; j < mountain[i].length; j++) {
+//       const left = dp[i + 1][j];
+//       const right = dp[i + 1][j + 1] || 0;
+
+//       dp[i][j] += Math.max(left, right);
+//     }
+//   }
+
+//   // Возвращаем максимальное значение в верхней ячейке (вершине горы)
+//   return dp[0][0];
+// }
+// // Выводим результат
+// console.log('Максимальное количество очков:', maxPoints(mountain));
+
+// function maxScoreFromMountain(mountain, row = 0, col = 0) {
+
+//   if (row === mountain.length - 1) {
+//     return mountain[row][col];
+//   }
+
+//   const leftScore = maxScoreFromMountain(mountain, row + 1, col);
+//   const rightScore = maxScoreFromMountain(mountain, row + 1, col + 1);
+
+//   return mountain[row][col] + Math.max(leftScore, rightScore);
+// }
+
+// let mountain = [[6], [7, 10], [12, 11, 9], [90, 25, 13, 14]];
+// let maxScore = maxScoreFromMountain(mountain);
+// console.log(maxScore);
+
+function findPath(mountain) {
+  if (!mountain || mountain.length === 0) {
+    return 0;
+  }
+
+  const rows = mountain.length;
+  const cols = mountain[rows - 1].length;
+  // Создаем таблицу для хранения максимального количества очков
+  const dp = new Array(rows).fill(null).map(() => new Array(cols).fill(0));
+  console.log(dp);
+  // Начинаем сверху горы
+  for (let i = 0; i < rows; i++) {
+    for (let j = 0; j < mountain[i].length; j++) {
+      // Для верхней строки просто сохраняем значение
+      if (i === 0) {
+        dp[i][j] = mountain[i][j];
+      } else {
+        // Выбираем максимальное количество очков из доступных соседних клеток
+        const left = j - 1 >= 0 ? dp[i - 1][j - 1] : 0;
+        // console.log('left', left);
+        const right = j < mountain[i - 1].length ? dp[i - 1][j] : 0;
+        // console.log('right', right);
+        dp[i][j] = mountain[i][j] + Math.max(left, right);
+      }
+    }
+  }
+
+  return Math.max(...dp[rows - 1]);
+}
+
+// Пример входных данных
+const mountain = [[6], [7, 10], [12, 11, 9], [90, 25, 13, 14]];
+
+// Выводим результат
+console.log('Максимальное количество очков:', findPath(mountain));
