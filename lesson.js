@@ -2889,6 +2889,42 @@
 // let maxScore = maxScoreFromMountain(mountain);
 // console.log(maxScore);
 
+// function findPath(mountain) {
+//   if (!mountain || mountain.length === 0) {
+//     return 0;
+//   }
+
+//   const rows = mountain.length;
+//   const cols = mountain[rows - 1].length;
+//   // Создаем таблицу для хранения максимального количества очков
+//   const dp = new Array(rows).fill(null).map(() => new Array(cols).fill(0));
+//   console.log(dp);
+//   // Начинаем сверху горы
+//   for (let i = 0; i < rows; i++) {
+//     for (let j = 0; j < mountain[i].length; j++) {
+//       // Для верхней строки просто сохраняем значение
+//       if (i === 0) {
+//         dp[i][j] = mountain[i][j];
+//       } else {
+//         // Выбираем максимальное количество очков из доступных соседних клеток
+//         const left = j - 1 >= 0 ? dp[i - 1][j - 1] : 0;
+//         // console.log('left', left);
+//         const right = j < mountain[i - 1].length ? dp[i - 1][j] : 0;
+//         // console.log('right', right);
+//         dp[i][j] = mountain[i][j] + Math.max(left, right);
+//       }
+//     }
+//   }
+
+//   return Math.max(...dp[rows - 1]);
+// }
+
+// // Пример входных данных
+// const mountain = [[6], [7, 10], [12, 11, 9], [90, 25, 13, 14]];
+
+// // Выводим результат
+// console.log('Максимальное количество очков:', findPath(mountain));
+
 function findPath(mountain) {
   if (!mountain || mountain.length === 0) {
     return 0;
@@ -2896,21 +2932,19 @@ function findPath(mountain) {
 
   const rows = mountain.length;
   const cols = mountain[rows - 1].length;
-  // Создаем таблицу для хранения максимального количества очков
+
   const dp = new Array(rows).fill(null).map(() => new Array(cols).fill(0));
   console.log(dp);
-  // Начинаем сверху горы
+
   for (let i = 0; i < rows; i++) {
     for (let j = 0; j < mountain[i].length; j++) {
-      // Для верхней строки просто сохраняем значение
       if (i === 0) {
         dp[i][j] = mountain[i][j];
       } else {
-        // Выбираем максимальное количество очков из доступных соседних клеток
         const left = j - 1 >= 0 ? dp[i - 1][j - 1] : 0;
-        // console.log('left', left);
+
         const right = j < mountain[i - 1].length ? dp[i - 1][j] : 0;
-        // console.log('right', right);
+
         dp[i][j] = mountain[i][j] + Math.max(left, right);
       }
     }
@@ -2919,7 +2953,6 @@ function findPath(mountain) {
   return Math.max(...dp[rows - 1]);
 }
 
-// Пример входных данных
 const mountain = [[6], [7, 10], [12, 11, 9], [90, 25, 13, 14]];
 
 // Выводим результат
