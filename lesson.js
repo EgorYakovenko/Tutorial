@@ -2925,35 +2925,35 @@
 // // Выводим результат
 // console.log('Максимальное количество очков:', findPath(mountain));
 
-function findPath(mountain) {
-  if (!mountain || mountain.length === 0) {
-    return 0;
-  }
+// function findPath(mountain) {
+//   if (!mountain || mountain.length === 0) {
+//     return 0;
+//   }
 
-  const rows = mountain.length;
-  const cols = mountain[rows - 1].length;
+//   const rows = mountain.length;
+//   const cols = mountain[rows - 1].length;
 
-  const dp = new Array(rows).fill(null).map(() => new Array(cols).fill(0));
-  console.log(dp);
+//   const dp = new Array(rows).fill(null).map(() => new Array(cols).fill(0));
+//   console.log(dp);
 
-  for (let i = 0; i < rows; i++) {
-    for (let j = 0; j < mountain[i].length; j++) {
-      if (i === 0) {
-        dp[i][j] = mountain[i][j];
-      } else {
-        const left = j - 1 >= 0 ? dp[i - 1][j - 1] : 0;
+//   for (let i = 0; i < rows; i++) {
+//     for (let j = 0; j < mountain[i].length; j++) {
+//       if (i === 0) {
+//         dp[i][j] = mountain[i][j];
+//       } else {
+//         const left = j - 1 >= 0 ? dp[i - 1][j - 1] : 0;
 
-        const right = j < mountain[i - 1].length ? dp[i - 1][j] : 0;
+//         const right = j < mountain[i - 1].length ? dp[i - 1][j] : 0;
 
-        dp[i][j] = mountain[i][j] + Math.max(left, right);
-      }
-    }
-  }
+//         dp[i][j] = mountain[i][j] + Math.max(left, right);
+//       }
+//     }
+//   }
 
-  return Math.max(...dp[rows - 1]);
-}
+//   return Math.max(...dp[rows - 1]);
+// }
 
-const mountain = [[6], [7, 10], [12, 11, 9], [90, 25, 13, 14]];
+// const mountain = [[6], [7, 10], [12, 11, 9], [90, 25, 13, 14]];
 
 // Выводим результат
-console.log('Максимальное количество очков:', findPath(mountain));
+// console.log('Максимальное количество очков:', findPath(mountain));
