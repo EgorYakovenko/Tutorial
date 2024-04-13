@@ -123,7 +123,8 @@
 // Дополни код цикла for так, чтобы он последовательно логировал все элементы массива fruits.
 // const fruits = ['apple', 'plum', 'pear', 'orange'];
 
-// for (let i = 0; i < fruits.length; i +=1 ) { // Change this line
+// for (let i = 0; i < fruits.length; i += 1) {
+//   // Change this line
 //   const fruit = fruits[i]; // Change this line
 //   console.log(fruit);
 // }
@@ -2958,6 +2959,81 @@
 // Выводим результат
 // console.log('Максимальное количество очков:', findPath(mountain));
 
-const date = new Date();
+// const date = new Date();
 
-console.log(`Today is ${date.getFullYear()}`);
+// console.log(`Today is ${date.getFullYear()}`);
+
+//=============================================================================
+
+// const array = ['a', 'b', 'c', 'd', 'e'];
+
+// const someArray = array.some(test => test === 'c' || test === 'f');
+// console.log(someArray);
+
+// const array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// const arrayReduce = array.reduce((total, value) => total + value);
+
+// console.log(arrayReduce);
+
+// const array = ['a', 'b', 'a', 'b', 'a', 'b'];
+
+// const arrayEvery = array.every(ar => ar === 'a' || ar === 'b');
+// console.log(arrayEvery);
+
+// const array = [[1, 2], [3, 4], 5, [6, 7, [8, 9]]];
+// const arrayFlat = array.flat(Infinity);
+// console.log(arrayFlat);
+
+// const array = [
+//   { id: 1, name: 'john' },
+//   { id: 2, name: 'Ali' },
+//   { id: 3, name: 'Mass' },
+//   { id: 4, name: 'Mass' },
+// ];
+
+// const arrayFilter = array.filter(el => el.id === 2);
+// console.log(arrayFilter);
+
+// const arrayForEach = array.forEach(el => console.log(el.name + el.id));
+
+// const arrayFindIndex = array.findIndex(el => el.name === 'Ali');
+// console.log(arrayFindIndex);
+
+// const arrayFind = array.find(el => el.id === 3);
+// console.log(arrayFind.name);
+
+// const array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// const arrayFill = array.fill(0, 1, 7);
+// console.log(arrayFill);
+
+// const array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// const slice = array.slice(1, 6);
+// console.log(slice);
+// console.log(array);
+
+// const userData = {
+//   name: 'John',
+//   age: 25,
+//   isOnline: true,
+// };
+
+// // const object = Object.values(userData);
+// // console.log(object);
+
+// const object = Object.entries(userData);
+// console.log(object);
+
+// const promise = new Promise(function (res, rej) {
+//   console.log('res', res);
+//   console.log('rej', rej);
+// });
+// console.log(promise);
+// console.log('First log');
+
+// setTimeout(() => {
+//   console.log('Second log');
+// });
+
+// console.log('Third log');
+
+// console.log(setTimeout(2000));
