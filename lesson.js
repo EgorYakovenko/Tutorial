@@ -3037,3 +3037,49 @@
 // console.log('Third log');
 
 // console.log(setTimeout(2000));
+
+//===========JWT Token=================
+
+// import jwt from 'jsonwebtoken';
+
+// const payload = { id: 123456, username: 'Larson' };
+// const secret = 'secret word';
+// const token = jwt.sign(payload, secret);
+// const decode = jwt.decode(token);
+// const verify = jwt.verify(token, secret);
+// console.log('Token:', token);
+// console.log('Decode:', decode);
+// console.log('Verify:', verify);
+
+//==================
+
+import express from 'express';
+
+const router = express.Router();
+
+router.post('/registration', async (req, res, next) => {
+  const { username, email, password } = req.body;
+  const user = await User.findOne({ email });
+  if (user) {
+    return res.status(409).json({
+      status: 'error',
+      code: 409,
+      message: 'Email is already in use',
+      data: 'Conflict',
+    });
+  }
+  try {
+    const newUser = new User({ username, email });
+    newUser.setPassword(password);
+    await newUser.save();
+    res.status(201).json({
+      status: 'success',
+      code: 201,
+      data: {
+        message: 'Registration successful',
+      },
+    });
+  } catch (error) {
+    next(error);
+  }
+});
