@@ -3053,33 +3053,110 @@
 
 //==================
 
-import express from 'express';
+// import express from 'express';
 
-const router = express.Router();
+// const router = express.Router();
 
-router.post('/registration', async (req, res, next) => {
-  const { username, email, password } = req.body;
-  const user = await User.findOne({ email });
-  if (user) {
-    return res.status(409).json({
-      status: 'error',
-      code: 409,
-      message: 'Email is already in use',
-      data: 'Conflict',
-    });
-  }
-  try {
-    const newUser = new User({ username, email });
-    newUser.setPassword(password);
-    await newUser.save();
-    res.status(201).json({
-      status: 'success',
-      code: 201,
-      data: {
-        message: 'Registration successful',
-      },
-    });
-  } catch (error) {
-    next(error);
-  }
-});
+// router.post('/registration', async (req, res, next) => {
+//   const { username, email, password } = req.body;
+//   const user = await User.findOne({ email });
+//   if (user) {
+//     return res.status(409).json({
+//       status: 'error',
+//       code: 409,
+//       message: 'Email is already in use',
+//       data: 'Conflict',
+//     });
+//   }
+//   try {
+//     const newUser = new User({ username, email });
+//     newUser.setPassword(password);
+//     await newUser.save();
+//     res.status(201).json({
+//       status: 'success',
+//       code: 201,
+//       data: {
+//         message: 'Registration successful',
+//       },
+//     });
+//   } catch (error) {
+//     next(error);
+//   }
+// });
+
+// ==================================
+// function stringToArray(string){
+
+// return string.split(' ')
+
+// }
+
+// stringToArray("Robin Singh")
+
+// // ["Robin", "Singh"]
+// =======================================
+
+// cap — это количество людей, которое может вместить автобус, исключая водителя.
+// on — количество людей в автобусе, не считая водителя.
+// wait — это количество людей, ожидающих посадки в автобус, не считая водителя.
+// Если места достаточно, верните 0, а если нет, верните количество пассажиров, которых он не сможет взять.
+
+
+// function enough(cap, on, wait) {
+
+// const bus = cap - on - wait
+
+// if (bus < 0 ) {
+//   return bus * -1
+// }else {
+//   return 0
+// }
+ 
+// console.log(bus);
+
+// }
+// console.log(enough(100,60,50));
+// console.log(enough(10,5,5));
+// console.log(enough(20,5,5));
+// enough(100,60,50)
+// enough(10,5,5)
+// enough(20,5,5)
+
+// // enough(10, 5, 5), 0);
+// // enough(100, 60, 50), 10);
+// // enough(20, 5, 5), 0);
+
+// Вычислите, сколько лет назад отец был вдвое старше сына (или через сколько лет он будет вдвое старше). Ответ всегда больше или равен 0, независимо от того, было ли это в прошлом или в будущем.
+
+// function twiceAsOld(dadYearsOld, sonYearsOld) {
+
+// return Math.abs(sonYearsOld * 2 - dadYearsOld) 
+// }
+
+
+// console.log(twiceAsOld(36,7));
+// console.log(twiceAsOld(42,21));
+// console.log(twiceAsOld(22,1));
+// twiceAsOld(36,7) , 22)
+// twiceAsOld(42,21) , 0)
+// twiceAsOld(22,1) , 20)
+
+
+// Учитывая месяц как целое число от 1 до 12, верните, к какому кварталу года он принадлежит, как целое число.
+
+// Например: месяц 2 (февраль) является частью первого квартала; 6-й месяц (июнь) является частью второго квартала; и месяц 11 (ноябрь) является частью четвертого квартала.
+
+const quarterOf = (month) => {
+
+  if (month <= 3)
+    return 1
+    else if (month)
+  
+  
+}
+
+
+console.log(quarterOf(3));  //1
+console.log(quarterOf(4));  //2
+console.log(quarterOf(8));  //3
+console.log(quarterOf(11)); //4
