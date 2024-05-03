@@ -3146,17 +3146,22 @@
 
 // Например: месяц 2 (февраль) является частью первого квартала; 6-й месяц (июнь) является частью второго квартала; и месяц 11 (ноябрь) является частью четвертого квартала.
 
-const quarterOf = (month) => {
+// const quarterOf = (month) => {
 
-  if (month <= 3)
-    return 1
-    else if (month)
+//   if (month <= 3)
+//     return 1
+//     else if (month)
   
   
-}
+// }
 
 
-console.log(quarterOf(3));  //1
-console.log(quarterOf(4));  //2
-console.log(quarterOf(8));  //3
-console.log(quarterOf(11)); //4
+// console.log(quarterOf(3));  //1
+// console.log(quarterOf(4));  //2
+// console.log(quarterOf(8));  //3
+// console.log(quarterOf(11)); //4
+
+
+const username = "Poly";
+const message = "Welcome " + username + '!';
+console.log(message);
