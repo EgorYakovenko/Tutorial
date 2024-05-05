@@ -3162,6 +3162,15 @@
 // console.log(quarterOf(11)); //4
 
 
-const username = "Poly";
-const message = "Welcome " + username + '!';
-console.log(message);
+// const username = "Poly";
+// const message = "Welcome " + username + '!';
+// console.log(message);
+
+function multiply(x, y, z) {
+    console.log(`Result: ${x * y * z}`);
+  }
+  
+  console.log("Log before multiply execution");
+  multiply(2, 3, 5); // "Result: 30"
+  console.log("Log after multiply execution");
+  
