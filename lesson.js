@@ -3166,11 +3166,145 @@
 // const message = "Welcome " + username + '!';
 // console.log(message);
 
-function multiply(x, y, z) {
-    console.log(`Result: ${x * y * z}`);
-  }
+// function multiply(x, y, z) {
+//     console.log(`Result: ${x * y * z}`);
+//   }
   
-  console.log("Log before multiply execution");
-  multiply(2, 3, 5); // "Result: 30"
-  console.log("Log after multiply execution");
+//   console.log("Log before multiply execution");
+//   multiply(2, 3, 5); // "Result: 30"
+//   console.log("Log after multiply execution");
   
+
+// Завершите решение так, чтобы оно возвращало true, если первый переданный аргумент (строка) заканчивается вторым аргументом (также строкой).
+
+// function solution(str, ending){
+// console.log(str.endsWith(ending));
+
+// }
+
+// solution('abcde', 'cde') // returns true
+// // solution('abcde', 'abc') // returns false
+
+// function evenOrOdd(number) {
+//   if(number %2===0) {
+//     console.log('Even');
+//     return 'Even'
+//   }else {
+//     console.log('Odd');
+//     return 'Odd'
+//   }
+// }
+// evenOrOdd(2)
+// evenOrOdd(7)
+
+/*
+Тимми и Сара думают, что влюблены, но где они живут, 
+они узнают об этом только тогда, когда сорвут каждый 
+по цветку. Если у одного цветка четное количество лепестков, 
+а у другого нечетное, это означает, что они влюблены.
+*/
+
+// function lovefunc(flower1, flower2){
+//   const sum = flower1 + flower2
+//   if (sum % 2 ===0) {
+//     console.log('false');
+//     return false
+//   } else {
+//     console.log('true');
+//     return true
+//   }
+
+// }
+
+//   lovefunc(1,4)   // true
+//   lovefunc(2,2)   // false
+//   lovefunc(0,1)   // true
+//   lovefunc(0,0)   // false
+
+/*
+Ваши одноклассники попросили вас скопировать для них кое-какие документы. 
+Вы знаете, что одноклассников n, а в документах m страниц.
+
+Ваша задача — посчитать, сколько пустых страниц вам нужно. Если n < 0 или m < 0, вернуть 0.
+
+*/
+
+// function paperwork(n, m) {
+//   if (n > 0 && m > 0) {
+//     console.log(n*m);
+//     return n*m
+//   }else {
+//     console.log('0');
+//     return 0
+//   }
+// }
+
+
+//     paperwork(5,5)    // 25, 'Failed at paperwork(5, 5)'
+//     paperwork(5,-5)   // 0, 'Failed at paperwork(5, -5)'
+//     paperwork(-5,-5)  // 0, 'Failed at paperwork(-5, -5)'
+//     paperwork(-5,5)   // 0, 'Failed at paperwork(-5, 5)'
+//     paperwork(5,0)    // 0, 'Failed at paperwork(5, 0)'
+
+// function highAndLow(numbers){
+ 
+//  const num = numbers.split(' ').map(Number)
+//  const max = Math.max(...num).toString()
+//  const min = Math.min(...num).toString()
+//  const maxMin = max.concat(' ',min)
+
+//  return maxMin
+// console.log(maxMin);
+
+// }
+// highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4") // "42 -9"
+
+// // highAndLow("1 2 3") // "3 1"
+
+// function opposite(number) {
+//     console.log(-number);
+//   }
+
+//   opposite(1)
+//   opposite(4.25)
+//   opposite(-5)
+
+// function check(a, x) {
+//     return a.includes(x)
+//     console.log(a.includes(x));
+//   }
+
+//   check([66, 101], 66)  // true
+//   check([101, 45, 75, 105, 99, 107])   // 107 true
+//   check(['what', 'a', 'great', 'kata'], 'kat')  // false
+
+// function descendingOrder(n){
+//   let digits = n.toString().split('');
+//   digits.sort((a, b) => b - a);
+//   let result = parseInt(digits.join(''));
+//   return result;
+//   }
+
+// //   descendingOrder(15) // 51
+//   descendingOrder(1021)// 2110
+// //   descendingOrder(123456789) // 987654321
+
+// function isIsogram(str){
+// 	return new Set(str.toUpperCase()).size === str.length;
+// }
+
+
+// //   isIsogram("Dermatoglyphics")// true 
+// //   isIsogram("isogram")// true
+//   // false
+// //   isIsogram("isIsogram") // false 
+// console.log(isIsogram("aba"));
+
+// function findShort(s){
+
+//     console.log(Math.min(...s.split(' ').map(s=>s.length)));
+// }
+
+// findShort("bitcoin take over the world maybe who knows perhaps") // 3
+
+// // findShort("Let's travel abroad shall we")// 2
