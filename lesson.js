@@ -3308,3 +3308,67 @@
 // findShort("bitcoin take over the world maybe who knows perhaps") // 3
 
 // // findShort("Let's travel abroad shall we")// 2
+
+// function smash (words) {
+//     console.log(words.join(' ').trim());
+
+//    return words.join(' ').trim()
+// };
+
+// smash(["this", "is", "a", "really", "long", "sentence"])// "this is a really long sentence"
+// smash(["hello", "world"]) // "hello world"
+
+// // + 
+// const add = (x, y) => {
+  
+// };
+
+
+// // -
+// const subtract = (x, y) => {
+  
+// };
+
+
+// // *
+// const multiply = (x, y) => {
+  
+// };
+
+// function add(x,y) {
+//   return !y?x:add(x^y,(x&y)<<1);
+// }
+// function subtract(x,y) {
+//   return ~add(~x,y);
+// }
+// function multiply(x,y) {
+//   return y<0?~add(~0,multiply(x,~add(~0,y))):y&&add(y&1?x:0,multiply(x<<1,y>>1))
+// }
+
+// function grow(x){
+// return x.reduce((a, b)=>a*b)
+// console.log(sum);
+// }
+
+// grow([4, 1, 1, 1, 4]) // 16
+// grow([2, 2, 2, 2, 2, 2])// 64
+
+function abbrevName(name){
+    let firstW = ''
+    const arr = name.split(' ')
+    for (let el of arr) {
+        if (el[0] === el[0].toLowerCase()){
+            firstW += el[0].toLowerCase() + '.';
+            continue 
+        }else{
+            firstW += el[0] + '.';
+           continue 
+        }
+        
+    }
+    return firstW.slice(0, -1)
+}
+
+
+console.log(abbrevName("Sam Harris"));
+console.log(abbrevName("patrick feenan"))
