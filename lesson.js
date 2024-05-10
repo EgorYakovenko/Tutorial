@@ -3353,22 +3353,37 @@
 // grow([4, 1, 1, 1, 4]) // 16
 // grow([2, 2, 2, 2, 2, 2])// 64
 
-function abbrevName(name){
-    let firstW = ''
-    const arr = name.split(' ')
-    for (let el of arr) {
-        if (el[0] === el[0].toLowerCase()){
-            firstW += el[0].toLowerCase() + '.';
-            continue 
-        }else{
-            firstW += el[0] + '.';
-           continue 
-        }
+// function abbrevName(name){
+//     let firstW = ''
+//     const arr = name.split(' ')
+//     for (let el of arr) {
+//         if (el[0] === el[0].toLowerCase()){
+//             firstW += el[0].toLowerCase() + '.';
+//             continue 
+//         }else{
+//             firstW += el[0] + '.';
+//            continue 
+//         }
         
-    }
-    return firstW.slice(0, -1)
-}
+//     }
+//     return firstW.slice(0, -1)
+// }
 
 
-console.log(abbrevName("Sam Harris"));
-console.log(abbrevName("patrick feenan"))
+// console.log(abbrevName("Sam Harris"));
+// console.log(abbrevName("patrick feenan"))
+
+function reverseWords(str) {
+
+   let newString = ''
+   for (let i = str.length -1; i >=0;i--) {
+    newString +=str[i];
+   }
+   return newString
+  }
+
+//   reverseWords('The quick brown fox jumps over the lazy dog.')
+//   reverseWords('double  spaced  words')// 'elbuod  decaps  sdrow'
+//   reverseWords('apple')// 'elppa'
+
+  console.log(reverseWords('double  spaced  words'));
