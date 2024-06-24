@@ -3373,17 +3373,57 @@
 // console.log(abbrevName("Sam Harris"));
 // console.log(abbrevName("patrick feenan"))
 
-function reverseWords(str) {
+// function reverseWords(str) {
 
-   let newString = ''
-   for (let i = str.length -1; i >=0;i--) {
-    newString +=str[i];
-   }
-   return newString
-  }
+//    let newString = ''
+//    for (let i = str.length -1; i >=0;i--) {
+//     newString +=str[i];
+//    }
+//    return newString
+//   }
 
-//   reverseWords('The quick brown fox jumps over the lazy dog.')
-//   reverseWords('double  spaced  words')// 'elbuod  decaps  sdrow'
-//   reverseWords('apple')// 'elppa'
+// //   reverseWords('The quick brown fox jumps over the lazy dog.')
+// //   reverseWords('double  spaced  words')// 'elbuod  decaps  sdrow'
+// //   reverseWords('apple')// 'elppa'
 
-  console.log(reverseWords('double  spaced  words'));
+//   console.log(reverseWords('double  spaced  words'));
+
+const rps = (p1, p2) => {
+  if (p1 === p2) {
+    console.log('Draw!');
+    return 'Draw!'
+
+  } else if (p1 === 'scissors' && p2 === 'paper') {
+    console.log('Player 1 won!');
+    return 'Player 1 won!'
+
+  } else if (p1 === 'scissors' && p2 === 'rock'){
+    console.log('Player 2 won!');
+    return 'Player 2 won!'
+
+  }else if (p1 === 'paper' && p2 === 'rock'){
+    console.log('Player 1 won!');
+    return 'Player 1 won!'
+
+  }else if (p1 === 'paper' && p2 === 'scissors') {
+    console.log('Player 2 won!');
+    return 'Player 2 won!'
+
+  }else if (p1 === 'rock' && p2 === 'paper') {
+    console.log('Player 2 won!');
+    return 'Player 2 won!'
+
+}else if (p1 === 'rock' && p2 === 'scissors') {
+  console.log('Player 1 won!');
+  return 'Player 1 won!'
+}
+}
+rps('rock', 'rock') // draw
+rps('scissors', 'scissors') //draw
+
+rps('scissors', 'paper') //1 
+rps('scissors', 'rock') //2
+rps('paper', 'rock') //1
+rps('paper', 'scissors') //1
+rps('rock', 'paper') //2
+rps('rock', 'scissors') //1
