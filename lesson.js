@@ -3101,7 +3101,6 @@
 // wait — это количество людей, ожидающих посадки в автобус, не считая водителя.
 // Если места достаточно, верните 0, а если нет, верните количество пассажиров, которых он не сможет взять.
 
-
 // function enough(cap, on, wait) {
 
 // const bus = cap - on - wait
@@ -3111,7 +3110,7 @@
 // }else {
 //   return 0
 // }
- 
+
 // console.log(bus);
 
 // }
@@ -3130,9 +3129,8 @@
 
 // function twiceAsOld(dadYearsOld, sonYearsOld) {
 
-// return Math.abs(sonYearsOld * 2 - dadYearsOld) 
+// return Math.abs(sonYearsOld * 2 - dadYearsOld)
 // }
-
 
 // console.log(twiceAsOld(36,7));
 // console.log(twiceAsOld(42,21));
@@ -3140,7 +3138,6 @@
 // twiceAsOld(36,7) , 22)
 // twiceAsOld(42,21) , 0)
 // twiceAsOld(22,1) , 20)
-
 
 // Учитывая месяц как целое число от 1 до 12, верните, к какому кварталу года он принадлежит, как целое число.
 
@@ -3151,16 +3148,13 @@
 //   if (month <= 3)
 //     return 1
 //     else if (month)
-  
-  
-// }
 
+// }
 
 // console.log(quarterOf(3));  //1
 // console.log(quarterOf(4));  //2
 // console.log(quarterOf(8));  //3
 // console.log(quarterOf(11)); //4
-
 
 // const username = "Poly";
 // const message = "Welcome " + username + '!';
@@ -3169,11 +3163,10 @@
 // function multiply(x, y, z) {
 //     console.log(`Result: ${x * y * z}`);
 //   }
-  
+
 //   console.log("Log before multiply execution");
 //   multiply(2, 3, 5); // "Result: 30"
 //   console.log("Log after multiply execution");
-  
 
 // Завершите решение так, чтобы оно возвращало true, если первый переданный аргумент (строка) заканчивается вторым аргументом (также строкой).
 
@@ -3239,7 +3232,6 @@
 //   }
 // }
 
-
 //     paperwork(5,5)    // 25, 'Failed at paperwork(5, 5)'
 //     paperwork(5,-5)   // 0, 'Failed at paperwork(5, -5)'
 //     paperwork(-5,-5)  // 0, 'Failed at paperwork(-5, -5)'
@@ -3247,7 +3239,7 @@
 //     paperwork(5,0)    // 0, 'Failed at paperwork(5, 0)'
 
 // function highAndLow(numbers){
- 
+
 //  const num = numbers.split(' ').map(Number)
 //  const max = Math.max(...num).toString()
 //  const min = Math.min(...num).toString()
@@ -3293,11 +3285,10 @@
 // 	return new Set(str.toUpperCase()).size === str.length;
 // }
 
-
-// //   isIsogram("Dermatoglyphics")// true 
+// //   isIsogram("Dermatoglyphics")// true
 // //   isIsogram("isogram")// true
 //   // false
-// //   isIsogram("isIsogram") // false 
+// //   isIsogram("isIsogram") // false
 // console.log(isIsogram("aba"));
 
 // function findShort(s){
@@ -3318,21 +3309,19 @@
 // smash(["this", "is", "a", "really", "long", "sentence"])// "this is a really long sentence"
 // smash(["hello", "world"]) // "hello world"
 
-// // + 
+// // +
 // const add = (x, y) => {
-  
-// };
 
+// };
 
 // // -
 // const subtract = (x, y) => {
-  
-// };
 
+// };
 
 // // *
 // const multiply = (x, y) => {
-  
+
 // };
 
 // function add(x,y) {
@@ -3359,16 +3348,15 @@
 //     for (let el of arr) {
 //         if (el[0] === el[0].toLowerCase()){
 //             firstW += el[0].toLowerCase() + '.';
-//             continue 
+//             continue
 //         }else{
 //             firstW += el[0] + '.';
-//            continue 
+//            continue
 //         }
-        
+
 //     }
 //     return firstW.slice(0, -1)
 // }
-
 
 // console.log(abbrevName("Sam Harris"));
 // console.log(abbrevName("patrick feenan"))
@@ -3388,42 +3376,135 @@
 
 //   console.log(reverseWords('double  spaced  words'));
 
-const rps = (p1, p2) => {
-  if (p1 === p2) {
-    console.log('Draw!');
-    return 'Draw!'
+// const rps = (p1, p2) => {
+//   if (p1 === p2) {
+//     console.log('Draw!');
+//     return 'Draw!'
 
-  } else if (p1 === 'scissors' && p2 === 'paper') {
-    console.log('Player 1 won!');
-    return 'Player 1 won!'
+//   } else if (p1 === 'scissors' && p2 === 'paper') {
+//     console.log('Player 1 won!');
+//     return 'Player 1 won!'
 
-  } else if (p1 === 'scissors' && p2 === 'rock'){
-    console.log('Player 2 won!');
-    return 'Player 2 won!'
+//   } else if (p1 === 'scissors' && p2 === 'rock'){
+//     console.log('Player 2 won!');
+//     return 'Player 2 won!'
 
-  }else if (p1 === 'paper' && p2 === 'rock'){
-    console.log('Player 1 won!');
-    return 'Player 1 won!'
+//   }else if (p1 === 'paper' && p2 === 'rock'){
+//     console.log('Player 1 won!');
+//     return 'Player 1 won!'
 
-  }else if (p1 === 'paper' && p2 === 'scissors') {
-    console.log('Player 2 won!');
-    return 'Player 2 won!'
+//   }else if (p1 === 'paper' && p2 === 'scissors') {
+//     console.log('Player 2 won!');
+//     return 'Player 2 won!'
 
-  }else if (p1 === 'rock' && p2 === 'paper') {
-    console.log('Player 2 won!');
-    return 'Player 2 won!'
+//   }else if (p1 === 'rock' && p2 === 'paper') {
+//     console.log('Player 2 won!');
+//     return 'Player 2 won!'
 
-}else if (p1 === 'rock' && p2 === 'scissors') {
-  console.log('Player 1 won!');
-  return 'Player 1 won!'
-}
-}
-rps('rock', 'rock') // draw
-rps('scissors', 'scissors') //draw
+// }else if (p1 === 'rock' && p2 === 'scissors') {
+//   console.log('Player 1 won!');
+//   return 'Player 1 won!'
+// }
+// }
+// rps('rock', 'rock') // draw
+// rps('scissors', 'scissors') //draw
 
-rps('scissors', 'paper') //1 
-rps('scissors', 'rock') //2
-rps('paper', 'rock') //1
-rps('paper', 'scissors') //1
-rps('rock', 'paper') //2
-rps('rock', 'scissors') //1
+// rps('scissors', 'paper') //1
+// rps('scissors', 'rock') //2
+// rps('paper', 'rock') //1
+// rps('paper', 'scissors') //1
+// rps('rock', 'paper') //2
+// rps('rock', 'scissors') //1
+
+// напиши скрипт, который на вход принимает строку, на выход отдает массив строк со всеми возможными размещениями точек между букв
+
+// пример:
+
+// > abc
+
+// [ ‘abc’, ‘a.bc’, ‘ab.c’, ‘a.b.c’]
+
+// > abcd
+
+// [ ‘abcd’, ‘a.bcd’, ‘ab.cd’, ‘a.b.cd’ … ]
+
+// function floatingPoint(string) {
+//   let arr = [string];
+//   let n = arr.indexOf('.');
+
+//   return n;
+// }
+
+// console.log(floatingPoint('abcd'));
+//=================================================================
+// function addDots(string) {
+//   // Разделяем строку на массив символов
+//   let chars = string.split('');
+
+//   // Объединяем символы, добавляя точку между ними
+//   let dottedString = chars.join('.');
+
+//   return dottedString;
+// }
+
+// console.log(floatingPoint('hello')); // [ 'h.ello', 'he.llo', 'hel.lo', 'hell.o' ]
+// Пояснение:
+
+// Создание массива для результатов:
+
+// Создаем пустой массив result для хранения всех комбинаций.
+// Итерация по строке:
+
+// Используем цикл for, начиная с 1 и до конца строки, чтобы вставить точку после каждой буквы.
+// В каждой итерации создаем новую строку, вставляя точку после текущего символа. Для этого используем string.slice(0, i) для первой части строки и string.slice(i) для второй части строки.
+// Сохранение комбинации:
+
+// Добавляем полученную комбинацию в массив result.
+// Возврат массива:
+
+// Возвращаем массив с комбинациями.
+
+// function floatingPoint(string) {
+//   let result = [];
+
+//   // Перемещаем точку по строке
+//   for (let i = 1; i < string.length; i++) {
+//     let movePoint = string.slice(0, i) + '.' + string.slice(i);
+//     result.push(movePoint);
+//   }
+//   let chars = string.split('');
+
+//   let dottedString = chars.join('.');
+//   result.push(dottedString);
+
+//   return result;
+// }
+
+// function floatingPoint(string) {
+//   let result = [];
+//   if (!string) {
+//     return 'Enter the string';
+//   }
+
+//   for (let i = 1; i < string.length; i++) {
+//     let firstPart = string.slice(0, i);
+//     let secondPart = string.slice(i);
+//     let concat = firstPart + '.' + secondPart;
+
+//     result.push(concat);
+//   }
+//   let chars = string.split('');
+//   let addPoint = chars.join('.');
+//   result.push(addPoint);
+//   if (string.length === 1) {
+//     result.push(string + '.');
+//   }
+
+//   return result;
+// }
+// console.log(floatingPoint('  ')); // [ 'a.bcd', 'ab.cd', 'abc.d','a.b.c.d' ]
+
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+console.log(arr.length);
+arr.length = 3;
+console.log(arr);
