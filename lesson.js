@@ -3504,7 +3504,17 @@
 // }
 // console.log(floatingPoint('  ')); // [ 'a.bcd', 'ab.cd', 'abc.d','a.b.c.d' ]
 
-const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-console.log(arr.length);
-arr.length = 3;
-console.log(arr);
+// const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// console.log(arr.length);
+// arr.length = 3;
+// console.log(arr);
+
+const arr = [[[[1, 2, 3]], [4, 5], 6], 7, 8, 9];
+
+function spred(arr) {
+  const sp = arr.flat(Infinity);
+
+  return sp;
+}
+
+console.log(spred(arr));
