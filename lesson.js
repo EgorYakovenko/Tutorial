@@ -3509,12 +3509,181 @@
 // arr.length = 3;
 // console.log(arr);
 
-const arr = [[[[1, 2, 3]], [4, 5], 6], 7, 8, 9];
+// const arr = [[[[1, 2, 3]], [4, 5], 6], 7, 8, 9];
 
-function spred(arr) {
-  const sp = arr.flat(Infinity);
+// function spred(arr) {
+//   const sp = arr.flat(Infinity);
 
-  return sp;
+//   return sp;
+// }
+
+// console.log(spred(arr));
+
+//=======================================================
+
+// class Person {
+//   constructor(name, age) {
+//     this.name = name;
+//     this.age = age;
+//   }
+// }
+
+// let person1 = new Person('Alice', 30);
+// let person2 = new Person('Bob', 25);
+
+// console.log(person1);
+// console.log(person2);
+
+// class Node {
+//   constructor(data) {
+//     this.data = data;
+//     this.next = null;
+//   }
+// }
+
+// class LinkedList {
+//   constructor() {
+//     this.head = null;
+//   }
+
+//   insertAtBeginning(data) {
+//     const newNode = new Node(data);
+//     newNode.next = this.head;
+//     this.head = newNode;
+//   }
+
+//   insertAtEnd(data) {
+//     const newNode = new Node(data);
+//     if (!this.head) {
+//       this.head = newNode;
+//     } else {
+//       let cur = this.head;
+//       while (cur.next) {
+//         cur = cur.next;
+//       }
+//       cur.next = newNode;
+//     }
+//   }
+
+//   insertAfter(prevNode, data) {
+//     if (!prevNode) {
+//       console.log('Попереднього вузла не існує.');
+//       return;
+//     }
+//     const newNode = new Node(data);
+//     newNode.next = prevNode.next;
+//     prevNode.next = newNode;
+//   }
+
+//   deleteNode(key) {
+//     let cur = this.head;
+//     if (cur && cur.data === key) {
+//       this.head = cur.next;
+//       cur = null;
+//       return;
+//     }
+//     let prev = null;
+//     while (cur && cur.data !== key) {
+//       prev = cur;
+//       cur = cur.next;
+//     }
+//     if (!cur) {
+//       return;
+//     }
+//     prev.next = cur.next;
+//     cur = null;
+//   }
+
+//   searchElement(data) {
+//     let cur = this.head;
+//     while (cur) {
+//       if (cur.data === data) {
+//         return cur;
+//       }
+//       cur = cur.next;
+//     }
+//     return null;
+//   }
+
+//   printList() {
+//     let current = this.head;
+//     while (current) {
+//       console.log(current.data);
+//       current = current.next;
+//     }
+//   }
+// }
+
+// // Створюємо зв'язаний список
+// const llist = new LinkedList();
+
+// // Вставляємо вузли в початок
+// llist.insertAtBeginning(5);
+// llist.insertAtBeginning(10);
+// llist.insertAtBeginning(15);
+
+// // Вставляємо вузли в кінець
+// llist.insertAtEnd(20);
+// llist.insertAtEnd(25);
+
+// // Друк зв'язаного списку
+// console.log("Зв'язний список:");
+// llist.printList();
+
+// // Видаляємо вузол
+// llist.deleteNode(10);
+
+// console.log("\\nЗв'язний список після видалення вузла з даними 10:");
+// llist.printList();
+
+// // Пошук елемента у зв'язаному списку
+// console.log('\\nШукаємо елемент 15:');
+// const element = llist.searchElement(15);
+// if (element) {
+//   console.log(element.data);
+// }
+
+// // Створення хеш-таблиці (Map)
+// const hashTable = new Map();
+
+// // Додавання елемента
+// hashTable.set('key1', 'value1');
+// hashTable.set('key2', 'value2');
+
+// // Виведення результату
+// console.log(hashTable); // Map(2) {'key1' => 'value1', 'key2' => 'value2'}
+
+// function factorial(n) {
+//   console.log('Виклик функції factorial з n = ', n);
+//   if (n === 1) {
+//     console.log('Базовий випадок, n = 1, повернення 1');
+//     return 1;
+//   } else {
+//     const result = n * factorial(n - 1);
+//     console.log('Повернення результату для n = ', n, ': ', result);
+//     return result;
+//   }
+// }
+
+// console.log(factorial(5));
+
+// function fibonacci(n) {
+//   if (n <= 1) {
+//     return n;
+//   } else {
+//     return fibonacci(n - 1) + fibonacci(n - 2);
+//   }
+// }
+
+// console.log(fibonacci(10));
+
+function sum(n) {
+  let count = 0;
+
+  for (let i = 0; i <= n; i++) {
+    count += i;
+  }
+  return count;
 }
 
-console.log(spred(arr));
+console.log(sum(10));
