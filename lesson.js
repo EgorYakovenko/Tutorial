@@ -3677,13 +3677,38 @@
 
 // console.log(fibonacci(10));
 
-function sum(n) {
-  let count = 0;
+// function sum(n) {
+//   let count = 0;
 
-  for (let i = 0; i <= n; i++) {
-    count += i;
+//   for (let i = 0; i <= n; i++) {
+//     count += i;
+//   }
+//   return count;
+// }
+
+// console.log(sum(10));
+
+const nameList = ['Катя', 'Тимур', 'Сейфитин', 'Инна', 'Юра', 'Оксана'];
+
+function getCombinations(arr) {
+  const results = [];
+
+  function generateCombinations(start, combo) {
+    if (combo.length >= 3) {
+      results.push(combo.slice());
+    }
+
+    for (let i = start; i < arr.length; i++) {
+      combo.push(arr[i]);
+      generateCombinations(i + 1, combo);
+      combo.pop();
+    }
   }
-  return count;
+
+  generateCombinations(0, []);
+  return results;
 }
 
-console.log(sum(10));
+const combinations = getCombinations(nameList);
+console.log(combinations);
+console.log('Всего нужно создать:', combinations.length, 'групп в Телеграмм');
