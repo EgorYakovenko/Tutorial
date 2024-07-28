@@ -3687,28 +3687,128 @@
 // }
 
 // console.log(sum(10));
+//===============================================================================
+// const nameList = ['Катя', 'Тимур', 'Сейфитин', 'Инна', 'Юра', 'Оксана'];
 
-const nameList = ['Катя', 'Тимур', 'Сейфитин', 'Инна', 'Юра', 'Оксана'];
+// function getCombinations(arr) {
+//   const results = [];
 
-function getCombinations(arr) {
-  const results = [];
+//   function generateCombinations(start, combo) {
+//     if (combo.length >= 3) {
+//       results.push(combo.slice());
+//     }
 
-  function generateCombinations(start, combo) {
-    if (combo.length >= 3) {
-      results.push(combo.slice());
-    }
+//     for (let i = start; i < arr.length; i++) {
+//       combo.push(arr[i]);
+//       generateCombinations(i + 1, combo);
+//       combo.pop();
+//     }
+//   }
 
-    for (let i = start; i < arr.length; i++) {
-      combo.push(arr[i]);
-      generateCombinations(i + 1, combo);
-      combo.pop();
-    }
-  }
+//   generateCombinations(0, []);
+//   return results;
+// }
 
-  generateCombinations(0, []);
-  return results;
+// const combinations = getCombinations(nameList);
+// console.log(combinations);
+// console.log('Всего нужно создать:', combinations.length, 'групп в Телеграмм');
+//===================================================================================
+
+// function filterArray(numbers, value) {
+//   let newArr = [];
+//   numbers.forEach(function (number) {
+//     if (number > value) {
+//       newArr.push(number);
+//     }
+//   }, value);
+//   return newArr;
+// }
+
+// filterArray([1, 2, 3, 4, 5], 3);
+// console.log(filterArray([1, 2, 3, 4, 5], 3));
+
+// const calculateTotalPrice = orderedItems => {
+//   let totalPrice = 0;
+
+//   orderedItems.forEach(item => (totalPrice += item));
+
+//   return totalPrice;
+// };
+//===================================================================================
+
+// console.log(0 == false);
+
+// const fullName = 'Jacob Mercer';
+// console.log(fullName.slice(0, 5));
+
+// function normalizeInput(input, to) {
+//   if (to === 'upper') {
+//     return input.toUpperCase();
+//   } else {
+//     return input.toLowerCase();
+//   }
+// }
+// console.log(normalizeInput("This ISN'T SpaM", 'upper'));
+
+// function checkFileExtension(fileName, ext) {
+//   return fileName.toLowerCase().endsWith(ext)
+//     ? 'File extension matches'
+//     : 'File extension does not match';
+// }
+
+// console.log(checkFileExtension('styles.css', '.css'));
+
+// function createFileName(name, ext) {
+//   const trim = name.trim();
+//   return `${trim}.${ext}`;
+// }
+// console.log(createFileName(' order ', 'txt'));
+
+// let count = 0;
+
+// while (count < 10) {
+//   console.log(`Count: ${count}`);
+//   count += 1;
+// }
+
+// function calculateTotal(number) {
+//   let count = 0;
+//   while (number) {
+//     count += number;
+//   }
+//   return count;
+// }
+// console.log(calculateTotal(3));
+
+// const fruits = ['apple', 'plum', 'pear', 'orange'];
+
+// const firstElement = fruits[0];
+// const secondElement = fruits[1];
+// const lastElement = fruits[fruits.length - 1];
+
+// console.log(firstElement);
+// console.log(secondElement);
+// console.log(lastElement);
+
+// function getLastElementMeta(array) {
+//   let newArr = [];
+//   const index = array.length - 1;
+//   newArr.push(index);
+//   const val = array[index];
+//   newArr.push(val);
+//   return newArr;
+// }
+
+// console.log(getLastElementMeta(['apple', 'peach', 'pear', 'banana']));
+
+// [3, "banana"]
+
+function getExtremeElements(array) {
+  let newArr = [];
+
+  newArr.push(array[0]);
+  newArr.push(array[array.length - 1]);
+  return newArr;
 }
 
-const combinations = getCombinations(nameList);
-console.log(combinations);
-console.log('Всего нужно создать:', combinations.length, 'групп в Телеграмм');
+console.log(getExtremeElements([1, 2, 3, 4, 5]));
