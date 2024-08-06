@@ -3803,12 +3803,196 @@
 
 // [3, "banana"]
 
-function getExtremeElements(array) {
-  let newArr = [];
+// function getExtremeElements(array) {
+//   let newArr = [];
 
-  newArr.push(array[0]);
-  newArr.push(array[array.length - 1]);
-  return newArr;
+//   newArr.push(array[0]);
+//   newArr.push(array[array.length - 1]);
+//   return newArr;
+// }
+
+// console.log(getExtremeElements([1, 2, 3, 4, 5]));
+
+// function calculateEngravingPrice(message, pricePerWord) {
+//   return message.split(' ').length * pricePerWord;
+// }
+
+// console.log(calculateEngravingPrice('JavaScript is in my blood', 10));
+
+// const fruits = ['apple', 'plum', 'pear', 'orange', 'banana'];
+
+// const firstTwoEls = fruits.slice(0, 2);
+// const nonExtremeEls = fruits.slice(1, -1);
+// const lastThreeEls = fruits.slice(-3);
+
+// console.log(firstTwoEls);
+// console.log(nonExtremeEls);
+// console.log(lastThreeEls);
+
+// function getSlice(array, value) {
+//   const find = array.indexOf(value);
+
+//   return find < 0 ? [] : array.slice(0, find + 1);
+// }
+
+// console.log(getSlice(['Mango', 'Poly', 'Ajax'], 'Poly'));
+// console.log(getSlice(['Mango', 'Poly', 'Ajax'], 'Jacob'));
+
+// function createArrayOfNumbers(min, max) {
+//   let number = [];
+//   for (let i = min; i <= max; i++) {
+//     number.push(i);
+//   }
+//   return number;
+// }
+// console.log(createArrayOfNumbers(1, 10));
+
+// function calculateTotalPrice(order) {
+//   let count = 0;
+//   for (let i = 0; i < order.length; i++) {
+//     count += order[i];
+//   }
+//   return count;
+// }
+// console.log(calculateTotalPrice([12, 85, 37, 4]));
+
+// function getEvenNumbers(start, end) {
+//   let arr = [];
+//   for (let i = start; i <= end; i++) {
+//     if (i % 2 === 0) {
+//       arr.push(i);
+//     }
+//   }
+//   return arr;
+// }
+
+// console.log(getEvenNumbers(3, 11));
+
+// function checkStorage(storage, item) {
+//   const norm = item.toLowerCase();
+//   return storage.includes(norm)
+//     ? `${norm} is available to order!`
+//     : 'Sorry! We are out of stock!';
+// }
+// console.log(checkStorage(['apple', 'plum', 'pear'], 'plUM'));
+// console.log(checkStorage(['apple', 'plum', 'pear'], 'orange'));
+
+// function getCommonElements(array1, array2) {
+//   let newArr = [];
+//   for (let i = 0; i < array1.length; i++) {
+//     if (array2.includes(array1[i])) {
+//       newArr.push(array1[i]);
+//     }
+//   }
+//   return newArr;
+// }
+
+// console.log(getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40]));
+
+// console.log(getCommonElements([1, 2, 3], [2, 4]));
+// console.log(getCommonElements([1, 2, 3], [2, 1, 17, 19]));
+
+// function calculateTotalPrice(order) {
+//   let count = 0;
+//   for (const i of order) {
+//     count += i;
+//   }
+//   return count;
+// }
+
+// console.log(calculateTotalPrice([12, 85, 37, 4]));
+
+// const user = {
+//   name: 'Jacques Gluke',
+//   tag: 'jgluke',
+//   location: {
+//     country: 'Jamaica',
+//     city: 'Ocho Rios',
+//   },
+//   hobbies: ['swimming', 'music', 'sci-fi'],
+// };
+
+// const location = user.location;
+// console.log(location); // {country: "Jamaica", city: "Ocho Rios"}
+
+// const country = user.location.country;
+// console.log(country); // "Jamaica"
+
+// const apartment = {
+//   imgUrl: 'https://via.placeholder.com/640x480',
+//   descr: 'Spacious apartment in the city center',
+//   rating: 4,
+//   price: 2153,
+//   tags: ['premium', 'promoted', 'top'],
+//   owner: {
+//     name: 'Henry',
+//     phone: '982-126-1588',
+//     email: 'henry.carter@aptmail.com',
+//   },
+// };
+
+// const ownerName = apartment.owner.name;
+// const ownerPhone = apartment.owner.phone;
+// const ownerEmail = apartment.owner.email;
+// const numberOfTags = apartment.tags.length;
+// const firstTag = apartment.tags[0];
+// const lastTag = apartment.tags[apartment.tags.length - 1];
+
+// console.log(ownerName);
+// console.log(ownerPhone);
+// console.log(ownerEmail);
+// console.log(numberOfTags);
+// console.log(firstTag);
+// console.log(lastTag);
+
+// const apartment = {
+//   imgUrl: 'https://via.placeholder.com/640x480',
+//   descr: 'Spacious apartment in the city center',
+//   rating: 4,
+//   price: 2153,
+//   tags: ['premium', 'promoted', 'top'],
+// };
+
+// const aptRating = apartment['rating'];
+// const aptDescr = apartment['descr'];
+// const aptPrice = apartment['price'];
+// const aptTags = apartment['tags'];
+
+// console.log(aptRating);
+// console.log(aptDescr);
+// console.log(aptPrice);
+// console.log(aptTags);
+
+// const apartment = {
+//   imgUrl: 'https://via.placeholder.com/640x480',
+//   descr: 'Spacious apartment in the city center',
+//   rating: 4.7,
+//   price: 5000,
+//   tags: ['premium', 'promoted', 'top', 'trusted'],
+//   owner: {
+//     name: 'Henry Sibola',
+//     phone: '982-126-1588',
+//     email: 'henry.carter@aptmail.com',
+//   },
+// };
+
+// apartment.area = 60;
+// apartment.rooms = 3;
+// apartment.location = {
+//   country: 'Jamaica',
+//   city: 'Kingston',
+// };
+
+// console.log(apartment);
+
+const apartment = {
+  descr: 'Spacious apartment in the city center',
+  rating: 4,
+  price: 2153,
+};
+
+const keys = [];
+const values = [];
+
+for (key in apartment) {
 }
-
-console.log(getExtremeElements([1, 2, 3, 4, 5]));
