@@ -3860,6 +3860,7 @@
 //   let arr = [];
 //   for (let i = start; i <= end; i++) {
 //     if (i % 2 === 0) {
+//       console.log(i);
 //       arr.push(i);
 //     }
 //   }
@@ -3881,6 +3882,7 @@
 //   let newArr = [];
 //   for (let i = 0; i < array1.length; i++) {
 //     if (array2.includes(array1[i])) {
+//       console.log('x', array1[i]);
 //       newArr.push(array1[i]);
 //     }
 //   }
@@ -3985,14 +3987,502 @@
 
 // console.log(apartment);
 
-const apartment = {
-  descr: 'Spacious apartment in the city center',
-  rating: 4,
-  price: 2153,
-};
+// const apartment = {
+//   descr: 'Spacious apartment in the city center',
+//   rating: 4,
+//   price: 2153,
+// };
 
-const keys = [];
-const values = [];
+// const keys = [];
+// const values = [];
 
-for (key in apartment) {
-}
+// for (key in apartment) {
+// }
+
+// for (let i = 0; i < reversedStr.length; i += 3) {
+//   parts.push(reversedStr.slice(i, i + 3));
+// }
+
+// function number(num) {
+//   let result = [];
+
+//   result.push(num.slice(0, 1));
+
+//   for (let i = 1; i < num.length; i += 3) {
+//     result.push(num.slice(i, i + 3));
+//   }
+
+//   return result.join('.');
+// }
+
+// console.log(number('120000000000000'));
+
+// function floatingPoint(string) {
+//   let result = [];
+//   if (!string) {
+//     return 'Enter the string';
+//   }
+
+//   for (let i = 1; i < string.length; i++) {
+//     let firstPart = string.slice(0, i);
+//     let secondPart = string.slice(i);
+//     let concat = firstPart + '.' + secondPart;
+
+//     result.push(concat);
+//   }
+//   let chars = string.split('');
+//   let addPoint = chars.join('.');
+//   result.push(addPoint);
+//   if (string.length === 1) {
+//     result.push(string + '.');
+//   }
+
+//   return result;
+// }
+// console.log(floatingPoint('16516516516516')); // [ 'a.bcd', 'ab.cd', 'abc.d','a.b.c.d' ]
+// ==================================================================
+//  Определить сколько раз каждый элемент встречается в массиве.
+
+// const fruits = ['kiwi', 'apple', 'kiwi', 'orange', 'kiwi', 'apple'];
+
+// function countFruits(fruits) {
+//   let fruitCount = {};
+//   for (let i = 0; i < fruits.length; i++) {
+//     if (fruitCount[fruits[i]]) {
+//       fruitCount[fruits[i]] += 1;
+//     } else {
+//       fruitCount[fruits[i]] = 1;
+//     }
+//   }
+//   return fruitCount;
+// }
+// console.log(countFruits(fruits));
+// ========================================================================
+// Создать массив который содержит только уникальные значения исходного массива.
+// const fruits = ['kiwi', 'apple', 'kiwi', 'orange', 'kiwi', 'apple'];
+
+// function uniq(fruits) {
+//   let item = [];
+//   for (let i = 0; i < fruits.length; i++) {
+//     if (!item.includes(fruits[i])) {
+//       item.push(fruits[i]);
+//     }
+//   }
+//   return item;
+// }
+// console.log(uniq(fruits));
+
+// ========================================================================
+//  Создать функцию, которая группирует студентов по возрасту.
+
+// const students = [
+//   { name: 'alex', age: 20 },
+//   { name: 'mike', age: 24 },
+//   { name: 'masha', age: 20 },
+//   { name: 'stas', age: 18 },
+// ];
+
+// const grouped = {};
+// students.forEach(s => {
+//   if (!grouped[s.age]) {
+//     grouped[s.age] = [s];
+//   } else {
+//     grouped[s.age].push(s);
+//   }
+// });
+// console.log(grouped);
+// =======================================================================
+
+// Дано число. Проверьте, отрицательное оно или нет.
+// Выведите об этом информацию в консоль.
+// const number = 2;
+// console.log(number < 0 ? 'Число отрицательное' : 'Число положительное');
+// =======================================================================
+// Дано массив чисел отрицательных и положительных
+// необходимо отсортировать отрицательные и положительные числа
+
+// const numbers = [-1, -3, 4, 5, 9, -21, 23, 34, -78, 34, 56, 9, 10];
+
+// function sortNumbers(array) {
+//   let positive = [];
+//   let negative = [];
+//   array.forEach(number => {
+//     if (number < 0) {
+//       negative.push(number);
+//     } else {
+//       positive.push(number);
+//     }
+//   });
+//   return { positive, negative };
+// }
+// console.log(sortNumbers(numbers));
+// =======================================================================
+// Дано число. Проверьте, четное оно или нет.
+
+// const number = 4;
+// console.log(number % 2 === 0 ? 'число чётное' : 'число не чётное');
+// =======================================================================
+// Даны два слова. Проверьте, что первые буквы этих слов совпадают.
+
+// const words = ['Sam', 'small'];
+
+// function checkWords(array) {
+
+//   const a = array[0][0].toLowerCase();
+//   const b = array[1][0].toLowerCase();
+
+//   return a === b ? 'OK' : 'BAD';
+
+// }
+// console.log(checkWords(words));
+// =======================================================================
+// Дано слово. Получите его последнюю букву.
+// Если слово заканчивается на мягкий знак, то получите предпоследнюю букву.
+
+// const word = 'Слово';
+// const word2 = 'Мячь';
+
+// if (word2[word2.length - 1] === 'ь') {
+//   console.log('Предпоследняя', word2[word2.length - 2]);
+// } else {
+//   console.log('Последняя', word2[word2.length - 1]);
+// }
+// =======================================================================
+// Дано число. Выведите в консоль первую цифру этого числа.
+// Дано число. Выведите в консоль последнюю цифру этого числа.
+// const num = 35435;
+// const string = num.toString();
+// console.log(string[0]);
+// console.log(string[string.length - 1]);
+// =======================================================================
+// Дано число. Выведите в консоль сумму первой и последней цифры этого числа.
+// const num = 35435;
+// const string = num.toString();
+// const string2 = num.toString().length;
+// const sum = Number(string[0]) + Number(string[string.length - 1]);
+
+// console.log('Сумма', sum);
+// console.log('Длина', string2);
+// =======================================================================
+// Дана строка. Если в этой строке более одного символа, выведите в консоль предпоследний символ этой строки.
+
+// const string = 'sdaass';
+// const result = string.length === 1 ? 'Один символ' : string[string.length - 2];
+// console.log(result);
+// =======================================================================
+// Даны два целых числа. Проверьте, что первое число без остатка делится на второе.
+// const one = 12;
+// const two = 5;
+
+// const res = one % two === 0 ? 'OK' : 'BAD';
+// console.log(res);
+// console.log(one % two);
+// =======================================================================
+// Выведите в консоль все целые числа от 1 до 100.
+// const min = 1;
+// const max = 100;
+// for (let i = min; i <= max; i++) {
+//   console.log(i);
+// }
+
+// от 100 до 1.
+// const min = 100;
+// const max = 1;
+// for (let i = min; i >= max; i--) {
+//   console.log(i);
+// }
+
+// -100 до 0
+// const min = -100;
+// const max = 0;
+// for (let i = min; i <= max; i++) {
+//   console.log(i);
+// }
+// Выведите в консоль все числа кратные трем в промежутке от 1 до 100.
+// const min = 1;
+// const max = 100;
+// for (let i = min; i <= max; i++) {
+//   if (i % 3 === 0) {
+//     console.log(i);
+//   }
+// }
+// =======================================================================
+// Найдите сумму всех целых чисел от 1 до 100.
+// const min = 1;
+// const max = 100;
+
+// let sum = 0;
+// for (let i = min; i <= max; i++) {
+//   sum += i;
+// }
+// console.log(sum);
+// =======================================================================
+// Найдите сумму всех целых четных чисел в промежутке от 1 до 100.
+
+// const min = 1;
+// const max = 100;
+// let even = 0;
+// let odd = 0;
+// for (let i = min; i <= max; i++) {
+//   if (i % 2 === 0) {
+//     even += i;
+//   } else {
+//     odd += i;
+//   }
+// }
+// console.log('Чётные', even);
+// console.log('Не чётные', odd);
+// =======================================================================
+// Дана некоторая строка. Переберите и выведите в консоль по очереди все символы с конца строки.
+// const str = 'qwerty';
+// const a = str.split('');
+// const b = str.split('').reverse();
+// const rev = str.split('').reverse().join('');
+// console.log(a);
+// console.log(b);
+// console.log(rev);
+
+// for (const i of rev) {
+//   console.log(i);
+// }
+// =======================================================================
+// Дан массив с числами. Найдите сумму квадратов элементов этого массива.
+// const arr = [2, 3, 4, 5, 6, 7, 8];
+
+// for (const i of arr) {
+//   let sum = i * i;
+//   console.log(sum);
+// }
+// =======================================================================
+// Дан массив с числами. Найдите сумму квадратных корней элементов этого массива.
+// const arr = [2, 3, 4, 5, 6, 7, 8, 25];
+
+// for (const i of arr) {
+//   let sqrt = Math.sqrt(i);
+//   console.log(sqrt);
+// }
+// =======================================================================
+// Дан массив с числами. Найдите сумму положительных элементов этого массива.
+// const arr = [-1, -2, -3, -4, -6, -7, 2, 4];
+// let sum = 0;
+// arr.forEach(num => {
+//   if (num <= 0) {
+//     console.log('Число отрицательное');
+//   } else {
+//     sum += num;
+//   }
+// });
+// console.log(sum);
+//=======
+// for (const i of arr) {
+//   if (i < 0) {
+//     console.log('Число отрицательное');
+//   } else {
+//     sum += i;
+//   }
+// }
+// console.log(sum);
+// =======================================================================
+// Дан массив с числами. Найдите сумму тех элементов этого массива,
+// которые больше нуля и меньше десяти.
+
+// const arr = [-1, -2, -3, 0, 2, 3, 4, 10, 12, 13];
+// let sum = 0;
+// for (const i of arr) {
+//   if (i > 0 && i < 10) {
+//     sum += i;
+//   }
+// }
+// console.log(sum);
+// =======================================================================
+// Дана строка:'abcde' Получите массив букв этой строки.
+// const str = 'abcde';
+// const arr = str.split('');
+// console.log(arr);
+// ==================
+// Дано некоторое число:12345 Получите массив цифр этого числа.
+// const num = 12345;
+// const str = num.toString();
+// const arr = str.split('');
+// console.log(arr);
+// =======================================================================
+// Дано некоторое число:12345 Переверните его:
+// const num = 12345;
+// const str = num.toString();
+// const arr = str.split('').reverse().join('');
+// console.log(arr);
+// =======================================================================
+// Дано некоторое число:12345 Найдите сумму цифр этого числа.
+// const num = 12345;
+// const strNum = num.toString();
+// let sum = 0;
+// for (const i of strNum) {
+//   sum += Number(i);
+// }
+// console.log(sum);
+// =======================================================================
+// Заполните массив целыми числами от 1 до 10.
+// const arr = [];
+// for (let i = 1; i <= 10; i++) {
+//   arr.push(i);
+// }
+// console.log(arr);
+// =======================================================================
+// Заполните массив четными числами из промежутка от 1 до 100.
+// const arr = [];
+// for (let i = 1; i <= 100; i++) {
+//   if (i % 2 === 0) {
+//     arr.push(i);
+//   }
+// }
+// console.log(arr);
+// =======================================================================
+// Дан массив с дробями: [1.456, 2.125, 3.32, 4.1, 5.34]
+// Округлите эти дроби до одного знака в дробной части.
+// const arr = [1.446, 2.125, 3.32, 4.1, 5.34];
+// const newArr = [];
+// решение 1
+// arr.forEach(num => {
+//   const str = num.toString();
+//   const newNum = str.slice(0, 3);
+//   newArr.push(Number(newNum));
+// });
+
+// решение 2
+// for (const i of arr) {
+//   newArr.push(Number(i.toFixed(1)));
+// }
+// console.log(arr);
+// console.log(newArr);
+
+// =======================================================================
+// Дан массив со строками. Оставьте в этом массиве только те строки, которые начинаются на http://.
+// const arr = [
+//   'http://asdasds',
+//   'sdfsdfsf',
+//   '2432434',
+//   'uuuuuuuuuu',
+//   'http://243243423',
+// ];
+// const newArr = [];
+// const newArr2 = [];
+
+// arr.forEach((string, index) => {
+//   if (!string.startsWith('http://')) {
+//     newArr2.push(string);
+//   } else {
+//     newArr.push(string);
+//   }
+// });
+// console.log(newArr);
+// console.log(newArr2);
+// console.log(arr);
+// =======================================================================
+// Дан массив с числами. Увеличьте каждое число из массива на 10 процентов.
+// const number = [2, 3, 4, 5, 7, 8, 9, 10];
+
+// number.map(num => console.log(num * 1.1));
+// =======================================================================
+// Заполните массив случайными числами из промежутка от 1 до 100.
+// const newArr = [];
+
+// const random = Math.floor(Math.random() * (100 - 1) + 1);
+
+// for (let i = 0; i < random; i++) {
+//   const randomPush = Math.floor(Math.random() * 100);
+//   newArr.push(randomPush);
+// }
+// console.log(newArr);
+// =======================================================================
+// Дано некоторое число:12345 Выведите в консоль все его символы с конца.
+// const number = 12345;
+// const str = number.toString();
+// const reverse = str.split('').reverse().join('');
+// console.log(reverse);
+// =======================================================================
+// Дан некоторый массив, например, вот такой: [1, 2, 3, 4, 5, 6]
+// По очереди выведите в консоль подмассивы из двух элементов нашего массива:
+// const arr = [1, 2, 3, 4, 5, 6];
+
+// for (let i = 0; i < arr.length; i += 2) {
+//   const newArr = arr.slice(i, i + 2);
+//     console.log(newArr);
+// }
+// =======================================================================
+// Даны два массива:
+// let arr1 = [1, 2, 3];
+// let arr2 = [4, 5, 6];
+// Слейте эти массивы в новый массив:
+// const newArr = [...arr1, ...arr2];
+// const newArr = arr1.concat(arr2);
+// console.log(newArr);
+// =======================================================================
+// Дана некоторая строка. Найдите позицию первого нуля в строке.
+
+// const str = 'a0sd23402304s0dfs';
+// const newArr = str.split('');
+
+// const index = newArr.indexOf('0');
+// console.log(index);
+// =======================================================================
+// Выведите в консоль все числа в промежутке от 1 до 1000,
+// сумма первой и второй цифры которых равна пяти.
+
+// for (let i = 1; i <= 1000; i += 1) {
+//   let str = i.toString();
+//   let first = Number(str[0]);
+//   let second = Number(str[1] || 0);
+
+//   if (first + second === 5) {
+//     console.log(i);
+//   }
+// }
+// =======================================================================
+// Дан массив. Удалите из него элементы с заданным значением.
+// let array = ['qwe', '123', 222, true, 'rty', 'q'];
+// const i = array.indexOf(true);
+// array.splice(i, 1);
+// console.log(array);
+// =======================================================================
+// Дан некоторый массив, например, вот такой:[1, 2, 3, 4, 5, 6]
+// Найдите сумму первой половины элементов этого массива.
+// const arr = [1, 2, 3, 4, 5, 6];
+// const i = Math.floor((arr.length - 1) / 2);
+// const newArr = arr.slice(0, i + 1);
+// let sum = 0;
+// for (const i of newArr) {
+//   sum += i;
+// }
+// console.log(sum);
+// =======================================================================
+// Дан массив с числами. Подсчитайте количество отрицательных чисел в этом массиве.
+// const arr = [-1, -2, -3, -4, 1, 2, 3, -5, 4, 5];
+// let count = 0;
+// for (const i of arr) {
+//   if (i < 0) {
+//     count += 1;
+//   }
+// }
+// console.log(count);
+// =======================================================================
+// Дан массив с числами. Оставьте в нем только положительные числа.
+// const arr = [-1, -2, -3, -4, 1, 2, 3, -5, 4, 5];
+// for (let i = arr.length - 1; i >= 0; i--) {
+//   if (arr[i] < 0) {
+//     console.log('Значение', arr[i]);
+//     console.log('Индексы', i);
+//     arr.splice(i, 1);
+//   }
+// }
+// // console.log(arr);
+// // ===========
+// // const positive = arr.filter(i => i >= 0);
+// // console.log(positive);
+// =======================================================================
+// Дана строка. Удалите предпоследний символ из этой строки.
+const str = 'JavaScript';
+
+const index = str.length - 2;
+
+const newStr = str.slice(0, index) + str.slice(index + 1);
+console.log(newStr);
