@@ -4480,9 +4480,127 @@
 // // console.log(positive);
 // =======================================================================
 // Дана строка. Удалите предпоследний символ из этой строки.
-const str = 'JavaScript';
+// const str = 'JavaScript';
 
-const index = str.length - 2;
+// const index = str.length - 2;
 
-const newStr = str.slice(0, index) + str.slice(index + 1);
-console.log(newStr);
+// const newStr = str.slice(0, index) + str.slice(index + 1);
+// console.log(newStr);
+// =======================================================================
+// Дан некоторый массив, например, вот такой:[1, 2, 3, 4, 5, 6]
+// Поделите сумму первой половины элементов этого массива на сумму второй половины элементов.
+// const arr = [1, 2, 3, 4, 5, 6];
+// const i = Math.floor((arr.length - 1) / 2);
+// const first = arr.slice(0, i + 1).reduce((acc, val) => acc + val);
+// const second = arr.slice(i + 1).reduce((acc, val) => acc + val);
+// const result = first / second;
+// console.log(first);
+// console.log(second);
+// console.log('Result', result);
+// =======================================================================
+// Даны два слова.Проверьте, что последняя буква первого слова совпадает
+// с первой буквой второго слова.
+// const words = ['javascript', 'theme'];
+// const first = words[0];
+// const second = words[1];
+// if (first[first.length - 1] === second[0]) {
+//   console.log('ok');
+// } else {
+//   console.log('bad');
+// }
+// ======================================================================= Уровень 2.3
+// Дана некоторая строка. Найдите позицию третьего нуля в строке.
+// const str = 'qwe0rt0yu0';
+// const arr = str.split('');
+// const i = arr.indexOf('0');
+// console.log(i);
+
+// const index = arr.findIndex(val => val === '0');
+// console.log(index);
+
+// возвращает все индексы удовлетворяющие условию
+// arr.findIndex((val, index) => {
+//   if (val === '0') {
+//     console.log(index);
+//   }
+// });
+// =======================================================================
+// Даны числа, разделенные запятыми:'12,34,56'
+// Найдите сумму этих чисел.
+// const strNumber = '12,34,56';
+// const arr = strNumber.split(',');
+// let sum = 0;
+// for (let num of arr) {
+//   sum += parseInt(num);
+// }
+// console.log(sum);
+// =======================================================================
+// Дана дата в следующем формате:'2025-12-31'
+// Преобразуйте эту дату в следующий объект:
+// {
+// 	year: '2025',
+// 	month: '12',
+// 	day: '31',
+// }
+// const date = '2025-12-31';
+// const [year, month, day] = date.split('-');
+// const objDate = {
+//   year,
+//   month,
+//   day,
+// };
+// console.log(objDate);
+// =======================================================================
+// Дана некоторая строка с буквами и цифрами. Получите позицию первой цифры в этой строке.
+// const someStr = 'sdf5sdf34fs443dsf43';
+// let index = '';
+// let number = 0;
+// for (let i = 0; i < someStr.length; i++) {
+//   if (!isNaN(someStr[i])) {
+//     index = i;
+//     number = someStr[i];
+//     break;
+//   }
+// }
+// console.log(index);
+// console.log(parseInt(number));
+// =======================================================================
+// Дан объект с ключами и значениями. Запишите в первый массив ключи объекта, а во второй - значения.
+// const date = {
+//   year: '2025',
+//   month: '12',
+//   day: '31',
+// };
+// const keys = Object.keys(date);
+// const value = Object.values(date);
+// console.log(keys);
+// console.log(value);
+// =======================================================================
+// Дано число. Выведите в консоль количество четных цифр в этом числе.
+// const number = 32;
+// const arrNum = [];
+// for (let i = 1; i < number; i++) {
+//   if (i % 2 === 0) {
+//     arrNum.push(i);
+//   }
+// }
+// console.log(arrNum.length - 1);
+// =======================================================================
+// Дана некоторая строка:'abcde'
+// Переведите в верхний регистр все нечетные буквы этой строки. В нашем случае должно получится следующее:
+// 'AbCdE'
+
+// const str = 'переведите в верхний регистр все нечетные буквы этой строки';
+
+// for (let i = 0; i < str.length; i++) {
+//   if (i % 2 !== 0) {
+//     console.log(i);
+//     console.log(str[i].toUpperCase());
+
+//     // i.toUpperCase();
+//   }
+
+//   //   console.log(i);
+// }
+// console.log(str);
+
