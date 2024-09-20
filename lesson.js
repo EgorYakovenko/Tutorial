@@ -4625,11 +4625,13 @@
 // '023m0df0dfg0'
 // Получите массив позиций всех нулей в этой в строке.
 
-const str = '023m0df0dfg0';
+// const str = '023m0df0dfg0';
 
-let arr = [];
-for (let i = 0; i < str.length; i++) {
-  if (str[i === 0]) {
-  }
-  console.log(str[i]);
-}
+// let arr = [];
+// for (let i = 0; i < str.length; i++) {
+//   if (str[i === 0]) {
+//   }
+//   console.log(str[i]);
+// }
+
+// =======================================================================
